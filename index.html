@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>KK Pest Control Kota Kinabalu | Termite & Pest Control Services Sabah</title>
+
+<!-- SEO -->
+<meta name="description" content="KK Pest Control Kota Kinabalu — Professional termite, cockroach, rat, bed bug, and mosquito control services in Sabah. Fast response, affordable packages, licensed technicians.">
+<meta name="keywords" content="pest control kota kinabalu, termite control kk, pest control sabah, anai anai sabah, lipas, tikus, fumigation KK, kawalan serangga sabah, KK Pest Control">
+<meta name="author" content="KK Pest Control">
+
+<meta property="og:title" content="KK Pest Control Kota Kinabalu">
+<meta property="og:description" content="Professional Pest Control in Sabah — Termite, Rats, Mosquitoes, Cockroaches. Fast Response. Affordable Packages.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="your-logo.png">
+
+<style>
+/* COLORS */
+:root {
+    --teal: #0b6b4f;
+    --teal-dark: #08483a;
+    --accent: #f4a300;
+    --bg: #f6f7f7;
+    --card: #ffffff;
+    --muted: #555;
+    --radius: 12px;
+    --shadow: 0 8px 25px rgba(0,0,0,0.09);
+    --sans: 'Inter', sans-serif;
+}
+
+/* GLOBAL */
+body {
+    margin: 0;
+    font-family: var(--sans);
+    background: var(--bg);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+* { box-sizing: border-box; }
+
+/* HEADER */
+header {
+    background: var(--teal);
+    padding: 14px 20px 8px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    width: 110px;
+    height: auto;
+    margin-bottom: 12px;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.lang-toggle {
+    background: var(--accent);
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    color: #222;
+    font-weight: 700;
+    margin-left: 10px;
+    white-space: nowrap;
+}
+
+/* CONTAINERS */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px 20px;
+    width: 100%;
+    flex: 1;
+}
+
+.card {
+    background: var(--card);
+    padding: 26px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    margin-bottom: 28px;
+}
+
+h2, h3 { color: var(--teal-dark); }
+
+/* BUTTONS */
+.button {
+    background: var(--accent);
+    padding: 14px 18px;
+    border-radius: 7px;
+    display: inline-block;
+    cursor: pointer;
+    color: #222;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.button:hover { background: #ffbe33; }
+
+/* FORM */
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    margin-bottom: 18px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+/* GALLERY */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 18px;
+    margin-top: 15px;
+}
+.gallery img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 25px 10px;
+    background: #e5e8e7;
+    color: #333;
+    margin-top: auto;
+}
+
+.hidden { display: none; }
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <img src="./logo.jpeg" alt="KK Pest Control Logo" class="logo">
+    <nav>
+        <a onclick="showPage('home')">Home</a>
+        <a onclick="showPage('questionnaire')">Questionnaire</a>
+        <a onclick="showPage('about')">About</a>
+        <span id="langBtn" class="lang-toggle" onclick="toggleLang()">EN</span>
+    </nav>
+</header>
+
+<!-- HOME -->
+<section id="home" class="container">
+    <div class="card">
+        <h2 class="t" data-en="Professional Pest Control in Kota Kinabalu"
+                   data-my="Servis Kawalan Serangga Profesional di Kota Kinabalu"></h2>
+
+        <p class="t"
+           data-en="KK Pest Control provides expert pest removal solutions for homes, shops, offices, restaurants, and construction sites across Sabah. We specialise in termite treatment, cockroach control, rat removal, mosquito fogging, bed bugs, and preventive maintenance."
+           data-my="KK Pest Control menyediakan servis kawalan serangga profesional untuk rumah, kedai, pejabat, restoran dan tapak pembinaan di seluruh Sabah. Kami pakar dalam rawatan anai-anai, lipas, tikus, fogging nyamuk, pepijat, dan pencegahan serangga."></p>
+
+        <h3 class="t" data-en="Our Core Services" data-my="Servis Utama Kami"></h3>
+        <ul>
+            <li class="t" data-en="Termite Inspection, Baiting & Soil Treatment" data-my="Pemeriksaan & Rawatan Anai-anai (Baiting, Soil Treatment)"></li>
+            <li class="t" data-en="Cockroach & Ant Extermination" data-my="Rawat Lipas & Semut"></li>
+            <li class="t" data-en="Rat & Rodent Control" data-my="Kawalan Tikus"></li>
+            <li class="t" data-en="Mosquito Fogging" data-my="Fogging Nyamuk"></li>
+            <li class="t" data-en="Bed Bug Treatment" data-my="Rawatan Pepijat"></li>
+        </ul>
+
+        <a class="button t" onclick="showPage('questionnaire')" 
+           data-en="Get Free Inspection"
+           data-my="Dapatkan Pemeriksaan Percuma"></a>
+    </div>
+</section>
+
+<!-- QUESTIONNAIRE -->
+<section id="questionnaire" class="container hidden">
+    <div class="card">
+        <h2 class="t" data-en="Tell Us Your Issue" data-my="Ceritakan Masalah Anda"></h2>
+
+        <label class="t" data-en="Select your pest problem:" data-my="Pilih masalah serangga anda:"></label>
+        <select id="pestType">
+            <option data-en="Termites" data-my="Anai-anai"></option>
+            <option data-en="Cockroaches" data-my="Lipas"></option>
+            <option data-en="Rats" data-my="Tikus"></option>
+            <option data-en="Mosquitoes" data-my="Nyamuk"></option>
+            <option data-en="Bed Bugs" data-my="Pepijat"></option>
+            <option data-en="Others" data-my="Lain-lain"></option>
+        </select>
+
+        <label class="t" data-en="How long has the issue been happening?" data-my="Berapa lama masalah ini berlaku?"></label>
+        <select id="duration">
+            <option data-en="Few days" data-my="Beberapa hari"></option>
+            <option data-en="1-2 weeks" data-my="1-2 minggu"></option>
+            <option data-en="1 month+" data-my="1 bulan+"></option>
+            <option data-en="Not sure" data-my="Tidak pasti"></option>
+        </select>
+
+        <label class="t" data-en="Location (Area)" data-my="Lokasi / Kawasan"></label>
+        <input id="location">
+
+        <label class="t" data-en="Your Name" data-my="Nama Anda"></label>
+        <input id="name">
+
+        <label class="t" data-en="WhatsApp Number" data-my="Nombor WhatsApp"></label>
+        <input id="phone">
+
+        <div class="button t"
+             onclick="sendWhatsApp()"
+             data-en="Send to WhatsApp"
+             data-my="Hantar ke WhatsApp"></div>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="container hidden">
+    <div class="card">
+        <h2 class="t" data-en="About KK Pest Control" data-my="Tentang KK Pest Control"></h2>
+
+        <p class="t"
+           data-en="KK Pest Control is a fully licensed pest control company based in Kota Kinabalu, Sabah. With years of experience, we serve residential, commercial, and industrial clients. We provide safe, effective, and long-lasting pest control solutions."
+           data-my="KK Pest Control ialah syarikat kawalan serangga berlesen yang berpangkalan di Kota Kinabalu, Sabah. Dengan pengalaman bertahun-tahun, kami berkhidmat kepada pelanggan rumah, komersial dan industri. Kami menyediakan rawatan serangga yang selamat, berkesan dan tahan lama."></p>
+
+        <h3 class="t" data-en="Why Clients Choose Us" data-my="Kenapa Pelanggan Pilih Kami"></h3>
+        <ul>
+            <li class="t" data-en="Fast same-day response team" data-my="Team respon hari yang sama"></li>
+            <li class="t" data-en="Licensed and experienced technicians" data-my="Teknisi berlesen & berpengalaman"></li>
+            <li class="t" data-en="Safe for families & pets" data-my="Selamat untuk keluarga & haiwan peliharaan"></li>
+            <li class="t" data-en="Professional reporting & follow-up" data-my="Laporan profesional & follow-up"></li>
+            <li class="t" data-en="Affordable pest control packages" data-my="Pakej kawalan serangga mampu milik"></li>
+        </ul>
+
+        <h3 class="t" data-en="Gallery" data-my="Galeri"></h3>
+        <div class="gallery">
+            <img src="https://via.placeholder.com/300x200?text=Termite+Treatment" alt="">
+            <img src="https://via.placeholder.com/300x200?text=Cockroach+Control" alt="">
+            <img src="https://via.placeholder.com/300x200?text=Fogging+Service" alt="">
+            <img src="https://via.placeholder.com/300x200?text=Rat+Removal" alt="">
+        </div>
+    </div>
+</section>
+
+<footer>
+    © 2025 KK Pest Control — Kota Kinabalu, Sabah
+</footer>
+
+<script>
+const WHATSAPP_NUMBER = "60123456789"; 
+
+/* Show Pages */
+function showPage(id) {
+    document.querySelectorAll("section").forEach(s => s.classList.add("hidden"));
+    document.getElementById(id).classList.remove("hidden");
+    window.scrollTo(0,0);
+}
+
+/* Send to WhatsApp */
+function sendWhatsApp() {
+    const msg =
+`Pest Problem Report:
+- Pest: ${pestType.value}
+- Duration: ${duration.value}
+- Location: ${location.value}
+- Name: ${name.value}
+- Phone: ${phone.value}`;
+
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`);
+}
+
+/* LANGUAGE SYSTEM */
+let currentLang = "en";
+
+function toggleLang() {
+    currentLang = currentLang === "en" ? "my" : "en";
+    document.getElementById("langBtn").innerText = currentLang.toUpperCase();
+
+    document.querySelectorAll(".t").forEach(el => {
+        el.innerText = el.getAttribute(`data-${currentLang}`);
+    });
+
+    // Dropdown options
+    document.querySelectorAll("option").forEach(opt => {
+        if (opt.getAttribute(`data-${currentLang}`))
+            opt.innerText = opt.getAttribute(`data-${currentLang}`);
+    });
+}
+
+// Initialize
+toggleLang();
+</script>
+
+</body>
+</html>
+
