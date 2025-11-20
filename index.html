@@ -28,7 +28,7 @@
             --primary: #0a7d5f;
             --primary-dark: #065a44;
             --primary-light: #0d9974;
-            --accent: #ff9500;
+            --accent: #f7d77e;
             --accent-hover: #ffaa33;
             --bg-main: #fafbfb;
             --bg-card: #ffffff;
@@ -521,6 +521,7 @@
             padding: 32px;
             background: rgba(10, 125, 95, 0.03);
             border-radius: var(--radius-lg);
+            border: 2px solid rgba(10, 125, 95, 0.1);
         }
 
         .badge {
@@ -632,7 +633,7 @@
             display: grid;
             grid-template-columns: 1fr 2fr;
             gap: 24px;
-            align-items: start;
+            align-items: stretch;
         }
 
         .job-image {
@@ -844,10 +845,10 @@
                 <a onclick="showPage('home'); closeMenu();" class="t" data-en="Home" data-my="Laman Utama">Home</a>
                 <a onclick="showPage('services'); closeMenu();" class="t" data-en="Services"
                     data-my="Perkhidmatan">Services</a>
-                <a onclick="showPage('pastjobs'); closeMenu();" class="t" data-en="Past Jobs" data-my="Kerja Lepas">Past
-                    Jobs</a>
                 <a onclick="showPage('questionnaire'); closeMenu();" class="t" data-en="Get Quote"
                     data-my="Dapatkan Sebut Harga">Get Quote</a>
+                <a onclick="showPage('pastjobs'); closeMenu();" class="t" data-en="Past Jobs" data-my="Kerja Lepas">Past
+                    Jobs</a>
                 <a onclick="showPage('about'); closeMenu();" class="t" data-en="About" data-my="Tentang Kami">About</a>
                 <button id="langBtn" class="lang-toggle" onclick="toggleLang()">EN</button>
             </nav>
@@ -880,6 +881,9 @@
         </div>
 
         <div class="container">
+
+
+
             <!-- Stats -->
             <div class="stats">
                 <div class="stat-item">
@@ -901,6 +905,30 @@
                     <span class="stat-number">100%</span>
                     <span class="stat-label t" data-en="Licensed & Insured" data-my="Berlesen & Diinsuranskan">Licensed
                         & Insured</span>
+                </div>
+            </div>
+
+            <!-- Trust Badges -->
+            <div class="trust-badges">
+                <div class="badge">
+                    <div class="badge-icon">✓</div>
+                    <div class="badge-text t" data-en="Licensed Operators" data-my="Pengendali Berlesen">Licensed
+                        Operators</div>
+                </div>
+                <div class="badge">
+                    <div class="badge-icon">🛡️</div>
+                    <div class="badge-text t" data-en="Safety Guaranteed" data-my="Keselamatan Terjamin">Safety
+                        Guaranteed</div>
+                </div>
+                <div class="badge">
+                    <div class="badge-icon">⚡</div>
+                    <div class="badge-text t" data-en="Same-Day Service" data-my="Perkhidmatan Hari Sama">Same-Day
+                        Service</div>
+                </div>
+                <div class="badge">
+                    <div class="badge-icon">💰</div>
+                    <div class="badge-text t" data-en="Best Price Promise" data-my="Jaminan Harga Terbaik">Best Price
+                        Promise</div>
                 </div>
             </div>
 
@@ -958,29 +986,19 @@
                 </div>
             </div>
 
-            <!-- Trust Badges -->
-            <div class="trust-badges">
-                <div class="badge">
-                    <div class="badge-icon">✓</div>
-                    <div class="badge-text t" data-en="Licensed Operators" data-my="Pengendali Berlesen">Licensed
-                        Operators</div>
-                </div>
-                <div class="badge">
-                    <div class="badge-icon">🛡️</div>
-                    <div class="badge-text t" data-en="Safety Guaranteed" data-my="Keselamatan Terjamin">Safety
-                        Guaranteed</div>
-                </div>
-                <div class="badge">
-                    <div class="badge-icon">⚡</div>
-                    <div class="badge-text t" data-en="Same-Day Service" data-my="Perkhidmatan Hari Sama">Same-Day
-                        Service</div>
-                </div>
-                <div class="badge">
-                    <div class="badge-icon">💰</div>
-                    <div class="badge-text t" data-en="Best Price Promise" data-my="Jaminan Harga Terbaik">Best Price
-                        Promise</div>
-                </div>
+
+            <!-- Additional service cards continue... -->
+            <div class="text-center mt-12">
+                <a class="btn btn-primary btn-lg" onclick="showPage('questionnaire')"
+                    style="font-size: 18px; padding: 18px 40px;">
+                    <span class="t" data-en="🎯 Get Your Free Inspection Now"
+                        data-my="🎯 Dapatkan Pemeriksaan Percuma Anda Sekarang">🎯 Get Your Free Inspection Now</span>
+                </a>
+                <p style="margin-top: 16px; color: var(--text-muted);" class="t"
+                    data-en="Or call us directly: +60 16-358 7488" data-my="Atau hubungi kami terus: +60 16-358 7488">Or
+                    call us directly: +60 16-358 7488</p>
             </div>
+
         </div>
     </section>
 
@@ -1167,7 +1185,8 @@
         <div class="card fade-in">
             <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 20px;">
                 <div class="service-icon" style="margin: 0;">🛏️</div>
-                <h3 class="t" data-en="Bed Bug Heat Treatment" data-my="Rawatan Haba Pepijat" style="margin: 0; text-align:left"></h3>
+                <h3 class="t" data-en="Bed Bug Heat Treatment" data-my="Rawatan Haba Pepijat"
+                    style="margin: 0; text-align:left"></h3>
             </div>
 
             <p class="t"
@@ -1204,7 +1223,8 @@
         <div class="card fade-in">
             <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 20px;">
                 <div class="service-icon" style="margin: 0;">🦎</div>
-                <h3 class="t" data-en="General Pest Management" data-my="Pengurusan Serangga Am" style="margin: 0; text-align: left">
+                <h3 class="t" data-en="General Pest Management" data-my="Pengurusan Serangga Am"
+                    style="margin: 0; text-align: left">
                 </h3>
             </div>
 
@@ -1266,14 +1286,14 @@
         <div class="card fade-in">
             <div class="job-entry">
                 <div>
-                    <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=500&h=400&fit=crop"
-                        alt="Termite Treatment Project" class="job-image">
+                    <img src="./chilloutcafe.jpg" style="width: 400px; height: 400px; object-fit: cover;"
+                        alt="Termite Treatment Project at ChillOut Cafe Lintas" class="job-image">
                 </div>
-                <div>
-                    <h3 style="color: var(--primary); margin-bottom: 8px;">🏢 Commercial Building Termite Eradication
+                <div style="height: 100%">
+                    <h3 style="color: var(--primary); margin-bottom: 8px;">ChillOut Cafe
                     </h3>
                     <p style="color: var(--text-muted); font-size: 14px; margin-bottom: 16px;">
-                        <strong>Location:</strong> Penampang, KK | <strong>Date:</strong> January 2025
+                        <strong>Location:</strong> Lintas, KK | <strong>Date:</strong> May 2025
                     </p>
                     <p class="t"
                         data-en="Successfully eliminated a severe termite infestation in a 3-story commercial building. Used advanced baiting systems and soil treatment to protect the entire structure. Client reported no termite activity after 6-month follow-up."
@@ -1282,7 +1302,7 @@
                         advanced baiting systems and soil treatment to protect the entire structure. Client reported no
                         termite activity after 6-month follow-up.</p>
                     <div
-                        style="margin-top: 16px; padding: 12px; background: rgba(10, 125, 95, 0.05); border-radius: 8px;">
+                        style="position: relative; bottom: 0; padding: 12px; background: rgba(10, 125, 95, 0.05); border-radius: 8px;">
                         <p style="margin: 0; font-weight: 600; color: var(--primary);" class="t"
                             data-en="✓ Treatment: Sentricon Baiting System + Soil Barrier | Duration: 2 days"
                             data-my="✓ Rawatan: Sistem Umpan Sentricon + Penghalang Tanah | Tempoh: 2 hari">✓ Treatment:
@@ -1296,14 +1316,13 @@
         <div class="card fade-in">
             <div class="job-entry">
                 <div>
-                    <img src="https://images.unsplash.com/photo-1563453392212-326f5e854473?w=500&h=400&fit=crop"
-                        alt="Restaurant Pest Control" class="job-image">
+                    <img src="./howkee.jpg" style="width: 400px; height: 400px; object-fit: cover;"
+                        alt="How Kee Restaurant Pest Control" class="job-image">
                 </div>
                 <div>
-                    <h3 style="color: var(--primary); margin-bottom: 8px;">🍽️ Restaurant Deep Cleaning & Pest
-                        Management</h3>
+                    <h3 style="color: var(--primary); margin-bottom: 8px;">How Kee Restaurant</h3>
                     <p style="color: var(--text-muted); font-size: 14px; margin-bottom: 16px;">
-                        <strong>Location:</strong> Likas, KK | <strong>Date:</strong> December 2024
+                        <strong>Location:</strong> Bundusan, KK | <strong>Date:</strong> May 2025
                     </p>
                     <p class="t"
                         data-en="Complete pest management program for a busy restaurant facing cockroach and fly issues. Implemented monthly maintenance schedule with gel baiting, residual spraying, and hygiene protocols. Restaurant passed health inspection with flying colors."
@@ -1326,19 +1345,19 @@
         <div class="card fade-in">
             <div class="job-entry">
                 <div>
-                    <img src="https://images.unsplash.com/photo-1628744448839-00f777e52dc1?w=500&h=400&fit=crop"
-                        alt="Residential Rodent Control" class="job-image">
+                    <img src="./besthearingaidcentre.jpg" style="width: 400px; height: 400px; object-fit: cover;"
+                        alt="Best Hearing Aid Centre" class="job-image">
                 </div>
                 <div>
-                    <h3 style="color: var(--primary); margin-bottom: 8px;">🏠 Residential Rodent Exclusion Project</h3>
+                    <h3 style="color: var(--primary); margin-bottom: 8px;">Best Hearing Aid Centre</h3>
                     <p style="color: var(--text-muted); font-size: 14px; margin-bottom: 16px;">
-                        <strong>Location:</strong> Putatan | <strong>Date:</strong> November 2024
+                        <strong>Location:</strong> Tanjung Aru | <strong>Date:</strong> May 2025
                     </p>
                     <p class="t"
-                        data-en="Family home experiencing persistent rat problems for over 6 months. Our team identified 12 entry points, sealed them all, and set up monitoring traps. Zero rat activity within 2 weeks. Family extremely satisfied with humane approach."
-                        data-my="Rumah keluarga mengalami masalah tikus berterusan selama lebih 6 bulan. Pasukan kami mengenal pasti 12 titik masuk, menutup semuanya dan memasang perangkap pemantauan. Tiada aktiviti tikus dalam masa 2 minggu. Keluarga sangat berpuas hati dengan pendekatan berperikemanusiaan.">
-                        Family home experiencing persistent rat problems for over 6 months. Our team identified 12 entry
-                        points, sealed them all, and set up monitoring traps. Zero rat activity within 2 weeks. Family
+                        data-en="Centre experiencing persistent rat problems for over 6 months. Our team identified 12 entry points, sealed them all, and set up monitoring traps. Zero rat activity within 2 weeks. Customer extremely satisfied with humane approach."
+                        data-my="Bisnes mengalami masalah tikus berterusan selama lebih 6 bulan. Pasukan kami mengenal pasti 12 titik masuk, menutup semuanya dan memasang perangkap pemantauan. Tiada aktiviti tikus dalam masa 2 minggu. Kustomer sangat berpuas hati dengan pendekatan berperikemanusiaan.">
+                        Centre experiencing persistent rat problems for over 6 months. Our team identified 12 entry
+                        points, sealed them all, and set up monitoring traps. Zero rat activity within 2 weeks. Customer
                         extremely satisfied with humane approach.</p>
                     <div
                         style="margin-top: 16px; padding: 12px; background: rgba(10, 125, 95, 0.05); border-radius: 8px;">
@@ -1351,28 +1370,9 @@
             </div>
         </div>
 
-        <!-- Video Placeholder Section -->
-        <div class="card fade-in"
-            style="text-align: center; background: linear-gradient(135deg, rgba(10, 125, 95, 0.03), rgba(13, 153, 116, 0.05));">
-            <h3 class="t" data-en="📹 Watch Our Team in Action" data-my="📹 Tonton Pasukan Kami Beraksi">📹 Watch Our
-                Team in Action</h3>
-            <p class="t"
-                data-en="Video testimonials and treatment demonstrations coming soon! Follow us on social media for live updates."
-                data-my="Testimoni video dan demonstrasi rawatan akan datang tidak lama lagi! Ikuti kami di media sosial untuk kemas kini langsung.">
-                Video testimonials and treatment demonstrations coming soon! Follow us on social media for live updates.
-            </p>
-            <div style="margin-top: 24px;">
-                <div
-                    style="background: var(--bg-main); padding: 60px 20px; border-radius: var(--radius-md); border: 2px dashed var(--border);">
-                    <span style="font-size: 64px;">🎬</span>
-                    <p style="margin-top: 16px; color: var(--text-muted);" class="t"
-                        data-en="Video content will be displayed here"
-                        data-my="Kandungan video akan dipaparkan di sini">Video content will be displayed here</p>
-                </div>
-            </div>
-        </div>
 
-        <!-- Client Testimonials -->
+
+        <!-- Client Testimonials
         <div class="text-center mb-4" style="margin-top: 60px;">
             <h2 class="t" data-en="What Our Clients Say" data-my="Apa Kata Pelanggan Kami">What Our Clients Say</h2>
         </div>
@@ -1408,7 +1408,7 @@
                 </div>
             </div>
         </div>
-
+ -->
         <div style="text-align: center; margin-top: 40px;">
             <a class="btn btn-primary" onclick="showPage('questionnaire')">
                 <span class="t" data-en="📝 Get Your Free Quote" data-my="📝 Dapatkan Sebut Harga Percuma">📝 Get Your
@@ -1490,11 +1490,16 @@
                     <textarea id="details" rows="4" placeholder="Tell us more about your pest problem..."></textarea>
                 </div>
 
-                <button type="button" class="btn btn-primary" onclick="sendWhatsApp()" style="width: 100%;">
+                <button type="button" class="btn btn-primary" onclick="sendWhatsApp()"
+                    style="display: flex; width: 100%; text-align: center; justify-content: center;">
                     <span class="t" data-en="📱 Send Quote Request via WhatsApp"
                         data-my="📱 Hantar Permintaan Sebut Harga via WhatsApp">📱 Send Quote Request via
                         WhatsApp</span>
                 </button>
+
+                <p style="margin-top: 16px; color: var(--text-muted); text-align: center" class="t"
+                    data-en="Or call us directly: +60 16-358 7488" data-my="Atau hubungi kami terus: +60 16-358 7488">Or
+                    call us directly: +60 16-358 7488</p>
             </form>
         </div>
     </section>
@@ -1511,7 +1516,7 @@
                 and commercial clients throughout Sabah for over 34 years. Our team of licensed professionals combines
                 decades of experience with cutting-edge pest control technology to deliver safe, effective, and
                 long-lasting solutions.</p>
-
+            <!-- 
             <div
                 style="background: linear-gradient(135deg, var(--accent), var(--accent-hover)); padding: 32px; border-radius: var(--radius-lg); margin: 32px 0; text-align: center; box-shadow: var(--shadow-accent);">
                 <h3 style="color: var(--text-dark); font-size: 36px; margin-bottom: 12px; font-weight: 900;">34+ YEARS
@@ -1521,7 +1526,7 @@
                     data-my="Dipercayai oleh beribu-ribu keluarga dan perniagaan di seluruh Sabah sejak 1991">Trusted by
                     thousands of families and businesses across Sabah since 1991</p>
             </div>
-
+ -->
             <h3 class="mt-4 t" data-en="Why Choose KK Pest Control?" data-my="Kenapa Pilih KK Pest Control?">Why Choose
                 KK Pest Control?</h3>
 
@@ -1547,24 +1552,27 @@
                     City, Penampang, Putatan, Papar, Tuaran</li>
             </ul>
 
-            <h3 class="mt-4 t" data-en="Our Service Gallery" data-my="Galeri Perkhidmatan Kami">Our Service Gallery</h3>
             <div class="gallery">
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600&h=400&fit=crop"
-                        alt="Termite Treatment">
+                    <img src="./fogging.jpg" alt="Fogging">
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1563453392212-326f5e854473?w=600&h=400&fit=crop"
-                        alt="Pest Inspection">
+                    <img src="./work2.jpg" alt="Professional Team">
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1628744448839-00f777e52dc1?w=600&h=400&fit=crop"
-                        alt="Commercial Service">
+                    <img src="./pest1.jpg" alt="Queen Termite">
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=600&h=400&fit=crop"
-                        alt="Professional Team">
+                    <img src="./church-fogging.jpg" alt="Fogging in Church">
                 </div>
+                 <div class="gallery-item">
+                    <img src="./church-spraying.jpg" alt="Spraying up Church">
+                </div>
+                  <div class="gallery-item">
+                    <img src="./3weeks.jpg" alt="3 Weeks After Placing Trap">
+                </div>
+ 
+
             </div>
 
             <div class="mt-4 text-center">
