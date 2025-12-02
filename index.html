@@ -908,6 +908,46 @@
                 max-width: 500px;
             }
         }
+
+        /* Prevent entire site from scrolling horizontally */
+        html,
+        body {
+            overflow-x: hidden;
+            width: 100%;
+        }
+
+        /* Force proper sizing */
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Prevent nav overflow */
+        nav {
+            overflow-x: hidden;
+        }
+
+        nav ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 0;
+        }
+
+        nav ul li {
+            white-space: nowrap;
+        }
+
+        /* Prevent images from exceeding screen */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Extra safety for video section */
+        .videos-section {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
     </style>
 </head>
 
