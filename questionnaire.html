@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Get a Quote | KK Pest Control Kota Kinabalu</title>
+    <meta name="description" content="KK Pest Control Kota Kinabalu - Professional pest control services since 1991.">
+    <link rel="canonical" href="https://kkpestctrl.com/questionnaire.html">
+    <link rel="icon" href="./images/logo.jpeg" type="image/x-icon">
+    <meta name="theme-color" content="#0a7d5f">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo-section">
+                <a href="./index.html"><img src="./images/logo.jpeg" alt="KK Pest Control Logo" class="logo"></a>
+                <span class="brand-text t" data-en="KK Pest Control" data-my="KK Pest Control"></span>
+            </div>
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle menu">
+                <span id="menuIcon">☰</span>
+            </button>
+            <nav id="mainNav">
+                <a href="./index.html" class="t" data-en="Home" data-my="Laman Utama">Home</a>
+                <a href="./services.html" class="t" data-en="Services" data-my="Perkhidmatan">Services</a>
+                <a href="./questionnaire.html" class="t" data-en="Get Quote" data-my="Dapatkan Sebut Harga">Get Quote</a>
+                <a href="./pastjobs.html" class="t" data-en="Past Jobs" data-my="Kerja Lepas">Past Jobs</a>
+                <a href="./about.html" class="t" data-en="About" data-my="Tentang Kami">About</a>
+                <button id="langBtn" class="lang-toggle" onclick="toggleLang()">EN</button>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+<!-- QUESTIONNAIRE PAGE -->
+    <div class="card fade-in">
+            <h2 class="t" data-en="Get Your Free Inspection" data-my="Dapatkan Pemeriksaan Percuma Anda">Get Your Free
+                Inspection</h2>
+            <p class="t"
+                data-en="Tell us about your pest problem and we'll provide a customized solution with transparent pricing."
+                data-my="Beritahu kami tentang masalah serangga anda dan kami akan berikan penyelesaian tersuai dengan harga telus.">
+                Tell us about your pest problem and we'll provide a customized solution with transparent pricing.</p>
+
+            <form id="quoteForm" onsubmit="return false;">
+                <div class="form-group">
+                    <label class="t" data-en="What pest problem are you experiencing?"
+                        data-my="Apakah masalah serangga yang anda alami?">What pest problem are you
+                        experiencing?</label>
+                    <select id="pestType">
+                        <option class="t" data-en="Termites" data-my="Anai-anai">Termites</option>
+                        <option class="t" data-en="Cockroaches" data-my="Lipas">Cockroaches</option>
+                        <option class="t" data-en="Rats/Mice" data-my="Tikus">Rats/Mice</option>
+                        <option class="t" data-en="Mosquitoes" data-my="Nyamuk">Mosquitoes</option>
+                        <option class="t" data-en="Bed Bugs" data-my="Pepijat">Bed Bugs</option>
+                        <option class="t" data-en="Ants" data-my="Semut">Ants</option>
+                        <option class="t" data-en="Other Pests" data-my="Serangga Lain">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="t" data-en="How severe is the infestation?"
+                        data-my="Berapa teruk serangan serangga?">How severe is the infestation?</label>
+                    <select id="severity">
+                        <option class="t" data-en="Just noticed (1-2 pests)" data-my="Baru perasan (1-2 serangga)">Mild
+                        </option>
+                        <option class="t" data-en="Moderate (seeing daily)" data-my="Sederhana (nampak setiap hari)">
+                            Moderate</option>
+                        <option class="t" data-en="Severe (large numbers)" data-my="Teruk (bilangan besar)">Severe
+                        </option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="t" data-en="Property Type" data-my="Jenis Harta">Property Type</label>
+                    <select id="propertyType">
+                        <option class="t" data-en="Residential Home" data-my="Rumah Kediaman">Residential Home</option>
+                        <option class="t" data-en="Apartment/Condo" data-my="Apartmen/Kondo">Apartment</option>
+                        <option class="t" data-en="Office" data-my="Pejabat">Office</option>
+                        <option class="t" data-en="Restaurant/F&B" data-my="Restoran/F&B">Restaurant</option>
+                        <option class="t" data-en="Retail Shop" data-my="Kedai Runcit">Retail Shop</option>
+                        <option class="t" data-en="Warehouse/Factory" data-my="Gudang/Kilang">Warehouse</option>
+                        <option class="t" data-en="Other" data-my="Lain">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="t" data-en="Location / Area in Kota Kinabalu"
+                        data-my="Lokasi / Kawasan di Kota Kinabalu">Location / Area in Kota Kinabalu</label>
+                    <input type="text" id="location" placeholder="e.g., Penampang, Likas, Putatan" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="t" data-en="Your Name" data-my="Nama Anda">Your Name</label>
+                    <input type="text" id="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="t" data-en="Phone Number" data-my="Nombor Telefon">Phone Number</label>
+                    <input type="tel" id="phone" placeholder="+60 12-345 6789" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="t" data-en="Additional Details (Optional)"
+                        data-my="Butiran Tambahan (Pilihan)">Additional Details (Optional)</label>
+                    <textarea id="details" rows="4" placeholder="Tell us more about your pest problem..."></textarea>
+                </div>
+
+                <button type="button" class="btn btn-primary" onclick="sendWhatsApp()"
+                    style="display: flex; width: 100%; text-align: center; justify-content: center;">
+                    <span class="t" data-en="📱 Send Quote Request via WhatsApp"
+                        data-my="📱 Hantar Permintaan Sebut Harga via WhatsApp">📱 Send Quote Request via
+                        WhatsApp</span>
+                </button>
+
+                <p style="margin-top: 16px; color: var(--text-muted); text-align: center" class="t"
+                    data-en="Or call us directly: +60 16-358 7488" data-my="Atau hubungi kami terus: +60 16-358 7488">Or
+                    call us directly: +60 16-358 7488</p>
+            </form>
+        </div>    </div>
+
+    <!-- WhatsApp Float Button -->
+    <div class="whatsapp-float" onclick="window.open('https://wa.me/60163587488', '_blank')">
+        💬
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="copyright">
+                <p class="t"
+                    data-en="© 2025 KK Pest Control – Professional Pest Management Services in Kota Kinabalu, Sabah"
+                    data-my="© 2025 KK Pest Control – Perkhidmatan Pengurusan Serangga Profesional di Kota Kinabalu, Sabah">
+                    © 2025 KK Pest Control – Professional Pest Management Services in Kota Kinabalu, Sabah</p>
+                <p style="margin-top: 8px; font-size: 13px;">
+                    <span class="t" data-en="Licensed & Insured | Available 24/7 | Serving All Sabah"
+                        data-my="Berlesen & Diinsuranskan | Tersedia 24/7 | Meliputi Seluruh Sabah">Licensed & Insured |
+                        Available 24/7 | Serving All Sabah</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+</html>

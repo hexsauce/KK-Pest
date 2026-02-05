@@ -4,39 +4,39 @@
   <!-- Home Page -->
   <url>
     <loc>https://kkpestctrl.com/</loc>
-    <lastmod>2025-12-13</lastmod>
+    <lastmod>2025-02-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
   <!-- Services Page -->
   <url>
-    <loc>https://kkpestctrl.com/#services</loc>
-    <lastmod>2025-12-13</lastmod>
+    <loc>https://kkpestctrl.com/services.html</loc>
+    <lastmod>2025-02-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   
   <!-- Get Quote / Questionnaire Page -->
   <url>
-    <loc>https://kkpestctrl.com/#questionnaire</loc>
-    <lastmod>2025-12-13</lastmod>
+    <loc>https://kkpestctrl.com/questionnaire.html</loc>
+    <lastmod>2025-02-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   
   <!-- Past Jobs Page -->
   <url>
-    <loc>https://kkpestctrl.com/#pastjobs</loc>
-    <lastmod>2025-12-13</lastmod>
+    <loc>https://kkpestctrl.com/pastjobs.html</loc>
+    <lastmod>2025-02-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <!-- About Page -->
   <url>
-    <loc>https://kkpestctrl.com/#about</loc>
-    <lastmod>2025-12-13</lastmod>
+    <loc>https://kkpestctrl.com/about.html</loc>
+    <lastmod>2025-02-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
