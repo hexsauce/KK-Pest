@@ -1662,7 +1662,7 @@
                 KK Pest Control?</h3>
 
             <ul class="features-list">
-                <li class="t" data-en="Same-day emergency response available"
+               <li class="t" data-en="Same-day emergency response available"
                     data-my="Respons kecemasan hari yang sama tersedia">Same-day emergency response available</li>
                 <li class="t" data-en="Experienced technicians with continuous training"
                     data-my="Teknisi berpengalaman dengan latihan berterusan">Experienced technicians with continuous
@@ -1792,24 +1792,18 @@
         }
 
         // Page Navigation
-        const pages = ['home', 'services', 'questionnaire', 'pastjobs', 'about'];
-
-        function showPage(page) {
-            pages.forEach(p => {
-                const el = document.getElementById(p);
-                if (el) el.classList.add('hidden');
+        function showPage(pageId) {
+            // Hide all sections
+            document.querySelectorAll('section').forEach(section => {
+                section.classList.add('hidden');
             });
 
-            const active = document.getElementById(page);
-            if (active) active.classList.remove('hidden');
-
-            // update URL so pages are linkable
-            if (window.location.hash !== `#${page}`) {
-                window.location.hash = page;
+            // Show selected section
+            const targetPage = document.getElementById(pageId);
+            if (targetPage) {
+                targetPage.classList.remove('hidden');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
             }
-
-            // 🔽 force page to start at top (below sticky header)
-            window.scrollTo({ top: 0, behavior: 'instant' });
         }
 
         // Language Toggle
@@ -1892,18 +1886,6 @@ Please provide a quote for this service. Thank you!
                 link.style.cursor = 'pointer';
             });
         });
-
-        function handleHash() {
-            const hash = window.location.hash.replace('#', '');
-            if (hash && document.getElementById(hash)) {
-                showPage(hash);
-            } else {
-                showPage('home');
-            }
-        }
-
-        window.addEventListener('hashchange', handleHash);
-        window.addEventListener('load', handleHash);
     </script>
 
 </body>
