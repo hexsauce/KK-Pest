@@ -1662,7 +1662,7 @@
                 KK Pest Control?</h3>
 
             <ul class="features-list">
-               <li class="t" data-en="Same-day emergency response available"
+                <li class="t" data-en="Same-day emergency response available"
                     data-my="Respons kecemasan hari yang sama tersedia">Same-day emergency response available</li>
                 <li class="t" data-en="Experienced technicians with continuous training"
                     data-my="Teknisi berpengalaman dengan latihan berterusan">Experienced technicians with continuous
@@ -1793,6 +1793,9 @@
 
         // Page Navigation
         function showPage(pageId) {
+            // Update URL hash
+            window.location.hash = pageId;
+
             // Hide all sections
             document.querySelectorAll('section').forEach(section => {
                 section.classList.add('hidden');
@@ -1803,6 +1806,17 @@
             if (targetPage) {
                 targetPage.classList.remove('hidden');
                 window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+
+            closeMenu(); // Close mobile menu after navigation
+        }
+
+        function handleHashChange() {
+            const hash = window.location.hash.substring(1); // Remove the '#'
+            if (hash && document.getElementById(hash)) {
+                showPage(hash);
+            } else {
+                showPage('home'); // Default to home if no/invalid hash
             }
         }
 
@@ -1875,8 +1889,11 @@ Please provide a quote for this service. Thank you!
 
         // Initialize on page load
         document.addEventListener('DOMContentLoaded', function () {
-            // Set default page
-            showPage('home');
+            // Handle initial hash or show home
+            handleHashChange();
+
+            // Listen for hash changes (back/forward browser buttons)
+            window.addEventListener('hashchange', handleHashChange);
 
             // Initialize language
             toggleLang();
