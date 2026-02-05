@@ -1805,7 +1805,7 @@
             const targetPage = document.getElementById(pageId);
             if (targetPage) {
                 targetPage.classList.remove('hidden');
-                window.scrollTo({ top: 0, behavior: 'smooth' });
+                window.scrollTo(0, 0);
             }
 
             closeMenu(); // Close mobile menu after navigation
