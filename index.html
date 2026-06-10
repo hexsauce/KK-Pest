@@ -1333,7 +1333,8 @@
                         <span class="t" data-en="🔍 Get Free Inspection" data-my="🔍 Pemeriksaan Percuma">🔍 Get Free
                             Inspection</span>
                     </a>
-                    <a class="btn btn-secondary" href="https://wa.me/60163587488" target="_blank">
+                    <a class="btn btn-secondary" href="https://wa.me/60163587488" target="_blank"
+                        onclick="gtag_report_conversion();">
                         <span class="t" data-en="💬 WhatsApp Us" data-my="💬 WhatsApp Kami">💬 WhatsApp Us</span>
                     </a>
                 </div>
@@ -2358,7 +2359,7 @@
     </section>
 
     <!-- WhatsApp Float Button -->
-    <div class="whatsapp-float" onclick="window.open('https://wa.me/60163587488', '_blank')">
+    <div class="whatsapp-float" onclick="openWhatsApp('https://wa.me/60163587488')">
         💬
     </div>
 
@@ -2367,7 +2368,7 @@
             <!-- <div class="footer-links">
                 <a href="#" class="t" data-en="Privacy Policy" data-my="Dasar Privasi">Privacy Policy</a>
                 <a href="#" class="t" data-en="Terms of Service" data-my="Terma Perkhidmatan">Terms of Service</a>
-                <a href="https://wa.me/60163587488" class="t" data-en="Contact Us" data-my="Hubungi Kami">Contact Us</a>
+                <a href="https://wa.me/60163587488" target="_blank" onclick="gtag_report_conversion();" class="t" data-en="Contact Us" data-my="Hubungi Kami">Contact Us</a>
             </div> -->
             <div class="copyright">
                 <p class="t"
@@ -2515,9 +2516,9 @@ ${details}` : ''}
 Please provide a quote for this service. Thank you!
     `.trim();
 
-            // Open WhatsApp
+            // Track conversion and open WhatsApp
             const encodedMessage = encodeURIComponent(message);
-            window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`, '_blank');
+            openWhatsApp(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`);
         }
 
 
@@ -2605,19 +2606,19 @@ Please provide a quote for this service. Thank you!
     </script>
 
     <script>
-        function gtag_report_conversion(url) {
-            var callback = function () {
-                if (typeof (url) != 'undefined') {
-                    window.location = url;
-                }
-            };
-            gtag('event', 'conversion', {
-                'send_to': 'AW-18171589737/3-M9CISs-rocEOno8dhD',
-                'value': 1.0,
-                'currency': 'MYR',
-                'event_callback': callback
-            });
-            return false;
+        function gtag_report_conversion() {
+            if (typeof gtag === 'function') {
+                gtag('event', 'conversion', {
+                    'send_to': 'AW-18171589737/3-M9CISs-rocEOno8dhD',
+                    'value': 1.0,
+                    'currency': 'MYR'
+                });
+            }
+        }
+
+        function openWhatsApp(url) {
+            gtag_report_conversion();
+            window.open(url, '_blank');
         }
     </script>
 </body>
