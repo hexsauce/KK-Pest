@@ -348,12 +348,23 @@
             border: 2px solid var(--border);
             transition: var(--transition);
             text-align: center;
+            cursor: pointer;
         }
 
         .service-card:hover {
             border-color: var(--primary);
             box-shadow: var(--shadow-lg);
             transform: translateY(-6px);
+        }
+
+        .service-detail-card,
+        .service-group-intro {
+            scroll-margin-top: 110px;
+        }
+
+        .service-scroll-highlight {
+            border-color: var(--primary) !important;
+            box-shadow: 0 0 0 4px rgba(10, 125, 95, 0.12), var(--shadow-lg) !important;
         }
 
         .service-icon {
@@ -1479,7 +1490,7 @@
             </div>
 
             <div class="services-grid">
-                <div class="service-card">
+                <div class="service-card" onclick="showService('termite-control-solutions')" role="button" tabindex="0">
                     <div class="service-icon">🐜</div>
                     <h3 class="t" data-en="Termite Control" data-my="Kawalan Anai-anai">Termite Control</h3>
                     <p class="t"
@@ -1487,7 +1498,7 @@
                         data-my="Lindungi rumah atau premis anda dengan sistem umpan anai-anai, rawatan tanah, kawalan koloni, pemantauan dan pelan pencegahan.">
                         Protect your home or business with termite baiting systems, soil treatment, colony control, monitoring, and prevention plans.</p>
                 </div>
-                <div class="service-card">
+                <div class="service-card" onclick="showService('cockroach-treatment')" role="button" tabindex="0">
                     <div class="service-icon">🪳</div>
                     <h3 class="t" data-en="Cockroach Treatment" data-my="Rawatan Lipas">Cockroach Treatment</h3>
                     <p class="t"
@@ -1496,7 +1507,7 @@
                         Target cockroach infestations in kitchens, restaurants, homes, drains, and hidden breeding
                         areas.</p>
                 </div>
-                <div class="service-card">
+                <div class="service-card" onclick="showService('rodent-control')" role="button" tabindex="0">
                     <div class="service-icon">🐭</div>
                     <h3 class="t" data-en="Rodent Control" data-my="Kawalan Tikus">Rodent Control</h3>
                     <p class="t"
@@ -1504,7 +1515,7 @@
                         data-my="Kawal tikus dengan perangkap, stesen umpan, semakan titik masuk, nasihat penutupan dan pemantauan.">
                         Control rats and mice with traps, bait stations, entry-point checks, sealing advice, and monitoring.</p>
                 </div>
-                <div class="service-card">
+                <div class="service-card" onclick="showService('mosquito-fogging')" role="button" tabindex="0">
                     <div class="service-icon">🦟</div>
                     <h3 class="t" data-en="Mosquito Fogging" data-my="Fogging Nyamuk">Mosquito Fogging</h3>
                     <p class="t"
@@ -1512,14 +1523,14 @@
                         data-my="Kurangkan populasi nyamuk untuk rumah, kawasan luar, acara, pejabat dan premis komersial.">
                         Reduce mosquito populations with outdoor fogging for homes, compounds, events, and commercial areas.</p>
                 </div>
-                <div class="service-card">
+                <div class="service-card" onclick="showService('bed-bug-treatment')" role="button" tabindex="0">
                     <div class="service-icon">🛏️</div>
                     <h3 class="t" data-en="Bed Bug Treatment" data-my="Rawatan Pepijat">Bed Bug Treatment</h3>
                     <p class="t"
                         data-en="Treat bed bugs in mattresses, sofas, furniture, bedrooms, hotels, hostels, and rental units."
                         data-my="Rawat pepijat di tilam, sofa, perabot, bilik tidur, hotel, hostel dan unit sewa.">Treat bed bugs in mattresses, sofas, furniture, bedrooms, hotels, hostels, and rental units.</p>
                 </div>
-                <div class="service-card">
+                <div class="service-card" onclick="showService('general-pest-control')" role="button" tabindex="0">
                     <div class="service-icon">🛡️</div>
                     <h3 class="t" data-en="General Pest Control" data-my="Kawalan Serangga Am">General Pest Control</h3>
                     <p class="t"
@@ -1528,7 +1539,7 @@
                         Cockroach, ant, spider, silverfish, and crawling pest control for homes and businesses.
                     </p>
                 </div>
-                <div class="service-card">
+                <div class="service-card" onclick="showService('gecko-control')" role="button" tabindex="0">
                     <div class="service-icon">🦎</div>
                     <h3 class="t" data-en="Gecko Control" data-my="Kawalan Cicak">Gecko Control</h3>
                     <p class="t"
@@ -1537,7 +1548,7 @@
                         Manage gecko issues around homes, shops, ceilings, signage, kitchens, and commercial premises.
                     </p>
                 </div>
-                <div class="service-card">
+                <div class="service-card" onclick="showService('bird-control')" role="button" tabindex="0">
                     <div class="service-icon">🐦</div>
                     <h3 class="t" data-en="Bird Control" data-my="Kawalan Burung">Bird Control</h3>
                     <p class="t"
@@ -1576,7 +1587,7 @@
 
         <!-- Service cards -->
         <!-- Termite Control Group -->
-        <div class="card fade-in service-group-intro">
+        <div id="termite-control-solutions" class="card fade-in service-group-intro">
             <span class="service-group-label t" data-en="Termite Control Solutions" data-my="Penyelesaian Kawalan Anai-anai">Termite Control Solutions</span>
             <h3 class="t" data-en="Three termite methods under one complete service" data-my="Tiga kaedah anai-anai di bawah satu perkhidmatan lengkap">Three termite methods under one complete service</h3>
             <p class="t"
@@ -1600,7 +1611,7 @@
         </div>
 
         <!-- Termite Method: Baiting System -->
-        <div class="card fade-in service-detail-card termite-method-card">
+        <div id="termite-baiting-system" class="card fade-in service-detail-card termite-method-card">
             <div class="service-detail-layout">
                 <div>
                     <div class="service-image-wrap">
@@ -1647,7 +1658,7 @@
         </div>
 
         <!-- Termite Method: Chemical Soil Treatment -->
-        <div class="card fade-in service-detail-card termite-method-card">
+        <div id="chemical-soil-treatment" class="card fade-in service-detail-card termite-method-card">
             <div class="service-detail-layout">
                 <div>
                     <div class="service-image-wrap">
@@ -1697,7 +1708,7 @@
         </div>
 
         <!-- Termite Method: Corrective Soil Treatment -->
-        <div class="card fade-in service-detail-card termite-method-card">
+        <div id="corrective-soil-treatment" class="card fade-in service-detail-card termite-method-card">
             <div class="service-detail-layout">
                 <div>
                     <div class="service-image-wrap">
@@ -1756,7 +1767,7 @@
         </div>
 
         <!-- Cockroach Treatment -->
-        <div class="card fade-in service-detail-card">
+        <div id="cockroach-treatment" class="card fade-in service-detail-card">
             <div class="service-detail-layout">
                 <div>
                     <div class="service-image-wrap">
@@ -1809,7 +1820,7 @@
         </div>
 
         <!-- Rodent Control -->
-        <div class="card fade-in service-detail-card">
+        <div id="rodent-control" class="card fade-in service-detail-card">
             <div class="service-detail-layout">
                 <div>
                     <div class="service-image-wrap">
@@ -1855,7 +1866,7 @@
         </div>
 
         <!-- Mosquito Fogging -->
-        <div class="card fade-in service-detail-card">
+        <div id="mosquito-fogging" class="card fade-in service-detail-card">
             <div class="service-detail-layout">
                 <div>
                     <div class="service-image-wrap">
@@ -1901,11 +1912,11 @@
         </div>
 
         <!-- Bed Bug Treatment -->
-        <div class="card fade-in service-detail-card">
+        <div id="bed-bug-treatment" class="card fade-in service-detail-card">
             <div class="service-detail-layout">
                 <div>
                     <div class="service-image-wrap">
-                        <img class="service-detail-image" src="./images/services/service-bed-bugs.png"
+                        <img class="service-detail-image" src="./images/services/service-bed-bug.png"
                             alt="Bed bug treatment service image"
                             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                     </div>
@@ -1946,7 +1957,7 @@
         </div>
 
         <!-- General Pest Control -->
-        <div class="card fade-in service-detail-card">
+        <div id="general-pest-control" class="card fade-in service-detail-card">
             <div class="service-detail-layout">
                 <div>
                     <div class="service-image-wrap">
@@ -1992,7 +2003,7 @@
         </div>
 
         <!-- Gecko Control -->
-        <div class="card fade-in service-detail-card">
+        <div id="gecko-control" class="card fade-in service-detail-card">
             <div class="service-detail-layout">
                 <div>
                     <div class="service-image-wrap">
@@ -2046,7 +2057,7 @@
         </div>
 
         <!-- Bird Control -->
-        <div class="card fade-in service-detail-card">
+        <div id="bird-control" class="card fade-in service-detail-card">
             <div class="service-detail-layout">
                 <div>
                     <div class="service-image-wrap">
@@ -2583,32 +2594,114 @@
             icon.textContent = '☰';
         }
 
-        // Page Navigation
-        function showPage(pageId) {
-            // Update URL hash
-            window.location.hash = pageId;
+        // Page Navigation + browser back/forward state
+        function getCurrentPageId() {
+            const visibleSection = document.querySelector('section:not(.hidden)');
+            return visibleSection ? visibleSection.id : 'home';
+        }
 
-            // Hide all sections
+        function getPageStateFromHash() {
+            const hash = window.location.hash.substring(1);
+
+            if (!hash) {
+                return { page: 'home', scrollY: 0 };
+            }
+
+            if (hash.startsWith('services/')) {
+                const serviceId = hash.split('/')[1];
+                return { page: 'services', serviceId: serviceId || null };
+            }
+
+            const hashElement = document.getElementById(hash);
+
+            if (hashElement && hashElement.tagName && hashElement.tagName.toLowerCase() === 'section') {
+                return { page: hash, scrollY: 0 };
+            }
+
+            if (hashElement && hashElement.closest && hashElement.closest('#services')) {
+                return { page: 'services', serviceId: hash };
+            }
+
+            return { page: 'home', scrollY: 0 };
+        }
+
+        function setVisiblePage(pageId, options = {}) {
+            const scrollY = options.scrollY;
+            const scrollToTop = options.scrollToTop !== false;
+
             document.querySelectorAll('section').forEach(section => {
                 section.classList.add('hidden');
             });
 
-            // Show selected section
             const targetPage = document.getElementById(pageId);
             if (targetPage) {
                 targetPage.classList.remove('hidden');
-                window.scrollTo(0, 0);
+
+                window.requestAnimationFrame(() => {
+                    if (typeof scrollY === 'number') {
+                        window.scrollTo(0, scrollY);
+                    } else if (scrollToTop) {
+                        window.scrollTo(0, 0);
+                    }
+                });
             }
 
-            closeMenu(); // Close mobile menu after navigation
+            closeMenu();
         }
 
-        function handleHashChange() {
-            const hash = window.location.hash.substring(1); // Remove the '#'
-            if (hash && document.getElementById(hash)) {
-                showPage(hash);
-            } else {
-                showPage('home'); // Default to home if no/invalid hash
+        function saveCurrentHistoryState() {
+            const currentPage = getCurrentPageId();
+            const currentHash = window.location.hash || `#${currentPage}`;
+            history.replaceState({ page: currentPage, scrollY: window.scrollY }, '', currentHash);
+        }
+
+        function showPage(pageId, options = {}) {
+            const shouldPushState = options.pushState !== false;
+            const scrollY = typeof options.scrollY === 'number' ? options.scrollY : 0;
+
+            if (shouldPushState) {
+                saveCurrentHistoryState();
+                history.pushState({ page: pageId, scrollY }, '', `#${pageId}`);
+            }
+
+            setVisiblePage(pageId, { scrollY });
+        }
+
+        function scrollToServiceTarget(serviceId, shouldHighlight = true) {
+            window.setTimeout(() => {
+                const target = document.getElementById(serviceId);
+                if (!target) return;
+
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+                if (shouldHighlight) {
+                    target.classList.add('service-scroll-highlight');
+
+                    window.setTimeout(() => {
+                        target.classList.remove('service-scroll-highlight');
+                    }, 1600);
+                }
+            }, 80);
+        }
+
+        function showService(serviceId) {
+            saveCurrentHistoryState();
+            setVisiblePage('services', { scrollToTop: false });
+
+            history.pushState({ page: 'services', serviceId }, '', `#services/${serviceId}`);
+            scrollToServiceTarget(serviceId, true);
+        }
+
+        function applyNavigationState(state) {
+            const targetState = state || getPageStateFromHash();
+
+            setVisiblePage(targetState.page || 'home', {
+                scrollY: typeof targetState.scrollY === 'number' ? targetState.scrollY : undefined,
+                scrollToTop: !targetState.serviceId
+            });
+
+            if (targetState.serviceId) {
+                scrollToServiceTarget(targetState.serviceId, false);
             }
         }
 
@@ -2765,11 +2858,15 @@ Please provide a quote for this service. Thank you!
 
         // Initialize on page load
         document.addEventListener('DOMContentLoaded', function () {
-            // Handle initial hash or show home
-            handleHashChange();
+            // Handle initial URL state or show home
+            const initialState = getPageStateFromHash();
+            history.replaceState(initialState, '', window.location.hash || '#home');
+            applyNavigationState(initialState);
 
-            // Listen for hash changes (back/forward browser buttons)
-            window.addEventListener('hashchange', handleHashChange);
+            // Restore the previous page and scroll position when the browser Back/Forward buttons are used
+            window.addEventListener('popstate', event => {
+                applyNavigationState(event.state);
+            });
 
             // Initialize language
             fixServiceFooterMalayTranslations();
