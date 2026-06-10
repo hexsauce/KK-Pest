@@ -456,6 +456,72 @@
         }
 
 
+        /* GROUPED SERVICE SECTIONS */
+        .service-group-intro {
+            background: linear-gradient(135deg, rgba(10, 125, 95, 0.08), rgba(255, 149, 0, 0.08));
+            border: 2px solid rgba(10, 125, 95, 0.16);
+            border-left: 6px solid var(--primary);
+        }
+
+        .service-group-label {
+            display: inline-flex;
+            align-items: center;
+            width: fit-content;
+            padding: 8px 14px;
+            border-radius: 999px;
+            background: var(--primary);
+            color: white;
+            font-size: 13px;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            margin-bottom: 14px;
+        }
+
+        .service-group-methods {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+            margin-top: 24px;
+        }
+
+        .service-group-method {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 18px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .service-group-method strong {
+            display: block;
+            color: var(--primary-dark);
+            font-size: 16px;
+            margin-bottom: 6px;
+        }
+
+        .service-group-method span {
+            color: var(--text-muted);
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .service-method-badge {
+            display: inline-flex;
+            align-items: center;
+            width: fit-content;
+            padding: 7px 12px;
+            border-radius: 999px;
+            background: rgba(10, 125, 95, 0.08);
+            color: var(--primary-dark);
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 0.4px;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+
+
 
 
         /* SERVICE IMAGE LIGHTBOX */
@@ -1417,9 +1483,9 @@
                     <div class="service-icon">🐜</div>
                     <h3 class="t" data-en="Termite Control" data-my="Kawalan Anai-anai">Termite Control</h3>
                     <p class="t"
-                        data-en="Protect your home or business with termite baiting, colony control, monitoring, and prevention plans."
-                        data-my="Lindungi rumah atau premis anda dengan umpan anai-anai, kawalan koloni, pemantauan dan pelan pencegahan.">
-                        Protect your home or business with termite baiting, colony control, monitoring, and prevention plans.</p>
+                        data-en="Protect your home or business with termite baiting systems, soil treatment, colony control, monitoring, and prevention plans."
+                        data-my="Lindungi rumah atau premis anda dengan sistem umpan anai-anai, rawatan tanah, kawalan koloni, pemantauan dan pelan pencegahan.">
+                        Protect your home or business with termite baiting systems, soil treatment, colony control, monitoring, and prevention plans.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">🪳</div>
@@ -1509,8 +1575,32 @@
         </div>
 
         <!-- Service cards -->
-        <!-- Termite Control -->
-        <div class="card fade-in service-detail-card">
+        <!-- Termite Control Group -->
+        <div class="card fade-in service-group-intro">
+            <span class="service-group-label t" data-en="Termite Control Solutions" data-my="Penyelesaian Kawalan Anai-anai">Termite Control Solutions</span>
+            <h3 class="t" data-en="Three termite methods under one complete service" data-my="Tiga kaedah anai-anai di bawah satu perkhidmatan lengkap">Three termite methods under one complete service</h3>
+            <p class="t"
+                data-en="Different termite problems need different treatment methods. KK Pest Control provides baiting systems, chemical soil treatment, and corrective soil treatment depending on the property condition, infestation level, and protection goal."
+                data-my="Masalah anai-anai yang berbeza memerlukan kaedah rawatan yang berbeza. KK Pest Control menyediakan sistem umpan, rawatan tanah kimia dan rawatan tanah korektif bergantung kepada keadaan premis, tahap serangan dan tujuan perlindungan.">
+                Different termite problems need different treatment methods. KK Pest Control provides baiting systems, chemical soil treatment, and corrective soil treatment depending on the property condition, infestation level, and protection goal.</p>
+            <div class="service-group-methods">
+                <div class="service-group-method">
+                    <strong class="t" data-en="Termite Baiting System" data-my="Sistem Umpan Anai-anai">Termite Baiting System</strong>
+                    <span class="t" data-en="For colony elimination and long-term monitoring." data-my="Untuk penghapusan koloni dan pemantauan jangka panjang.">For colony elimination and long-term monitoring.</span>
+                </div>
+                <div class="service-group-method">
+                    <strong class="t" data-en="Chemical Soil Treatment" data-my="Rawatan Tanah Kimia">Chemical Soil Treatment</strong>
+                    <span class="t" data-en="For soil barrier protection around or under a property." data-my="Untuk perlindungan halangan tanah di sekeliling atau bawah premis.">For soil barrier protection around or under a property.</span>
+                </div>
+                <div class="service-group-method">
+                    <strong class="t" data-en="Corrective Soil Treatment" data-my="Rawatan Tanah Korektif">Corrective Soil Treatment</strong>
+                    <span class="t" data-en="For active termite infestations in existing buildings." data-my="Untuk serangan anai-anai aktif di bangunan sedia ada.">For active termite infestations in existing buildings.</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Termite Method: Baiting System -->
+        <div class="card fade-in service-detail-card termite-method-card">
             <div class="service-detail-layout">
                 <div>
                     <div class="service-image-wrap">
@@ -1520,10 +1610,11 @@
                     </div>
                 </div>
                 <div>
+                    <span class="service-method-badge t" data-en="Termite Control Method" data-my="Kaedah Kawalan Anai-anai">Termite Control Method</span>
                     <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 20px;">
                         <div class="service-icon" style="margin: 0;">🐜</div>
-                        <h3 class="t" data-en="Termite Control" data-my="Kawalan Anai-anai"
-                            style="margin: 0; text-align: left;">Termite Control</h3>
+                        <h3 class="t" data-en="Termite Baiting System" data-my="Sistem Umpan Anai-anai"
+                            style="margin: 0; text-align: left;">Termite Baiting System</h3>
                     </div>
 
                     <p class="t"
@@ -1553,6 +1644,115 @@
                     </div>
                 </div>
             </div>
+        </div>
+
+        <!-- Termite Method: Chemical Soil Treatment -->
+        <div class="card fade-in service-detail-card termite-method-card">
+            <div class="service-detail-layout">
+                <div>
+                    <div class="service-image-wrap">
+                        <img class="service-detail-image" src="./images/services/service-chemical-soil.png"
+                            alt="Chemical soil treatment termite service image"
+                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="service-detail-image-placeholder">
+                            <span>🐜</span>
+                            <small>Replace image: ./images/services/service-chemical-soil.png</small>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <span class="service-method-badge t" data-en="Termite Control Method" data-my="Kaedah Kawalan Anai-anai">Termite Control Method</span>
+                    <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 20px;">
+                        <div class="service-icon" style="margin: 0;">🛡️</div>
+                        <h3 class="t" data-en="Chemical Soil Treatment" data-my="Rawatan Tanah Kimia"
+                            style="margin: 0; text-align: left;">Chemical Soil Treatment</h3>
+                    </div>
+
+                    <p class="t"
+                        data-en="Chemical soil treatment creates a protective treated barrier around or under the property to stop termites from entering and reduce the risk of future infestation."
+                        data-my="Rawatan tanah kimia membentuk halangan perlindungan di sekeliling atau bawah premis untuk menghalang anai-anai masuk dan mengurangkan risiko serangan akan datang.">
+                        Chemical soil treatment creates a protective treated barrier around or under the property to stop termites from entering and reduce the risk of future infestation.</p>
+
+                    <h4 class="t" data-en="What We Do:" data-my="Apa Yang Kami Buat:"
+                        style="margin-top: 24px; color: var(--primary);">What We Do:</h4>
+                    <ul class="features-list">
+                        <li class="t" data-en="Inspect the property perimeter and soil treatment zones"
+                            data-my="Periksa perimeter premis dan zon rawatan tanah">Inspect the property perimeter and soil treatment zones</li>
+                        <li class="t" data-en="Apply approved chemicals into targeted soil areas"
+                            data-my="Aplikasikan bahan kimia yang diluluskan ke kawasan tanah bersasar">Apply approved chemicals into targeted soil areas</li>
+                        <li class="t" data-en="Create a treated barrier for deep, long-lasting protection"
+                            data-my="Bentuk halangan rawatan untuk perlindungan mendalam dan tahan lama">Create a treated barrier for deep, long-lasting protection</li>
+                        <li class="t" data-en="Recommend prevention steps for future termite risk"
+                            data-my="Cadangkan langkah pencegahan untuk risiko anai-anai akan datang">Recommend prevention steps for future termite risk</li>
+                    </ul>
+
+                    <div
+                        style="background: rgba(10, 125, 95, 0.05); padding: 20px; border-radius: 12px; margin-top: 24px;">
+                        <p style="margin: 0; font-weight: 600;" class="t"
+                            data-en="Best for construction, renovation, perimeter protection, and properties that need a strong soil barrier."
+                            data-my="Sesuai untuk pembinaan, renovasi, perlindungan perimeter dan premis yang memerlukan halangan tanah yang kuat.">Best for construction, renovation, perimeter protection, and properties that need a strong soil barrier.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Termite Method: Corrective Soil Treatment -->
+        <div class="card fade-in service-detail-card termite-method-card">
+            <div class="service-detail-layout">
+                <div>
+                    <div class="service-image-wrap">
+                        <img class="service-detail-image" src="./images/services/service-corrective-soil.png"
+                            alt="Corrective soil treatment termite service image"
+                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="service-detail-image-placeholder">
+                            <span>🐜</span>
+                            <small>Replace image: ./images/services/service-corrective-soil.png</small>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <span class="service-method-badge t" data-en="Termite Control Method" data-my="Kaedah Kawalan Anai-anai">Termite Control Method</span>
+                    <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 20px;">
+                        <div class="service-icon" style="margin: 0;">🎯</div>
+                        <h3 class="t" data-en="Corrective Soil Treatment" data-my="Rawatan Tanah Korektif"
+                            style="margin: 0; text-align: left;">Corrective Soil Treatment</h3>
+                    </div>
+
+                    <p class="t"
+                        data-en="Corrective soil treatment is used for active termite problems in existing buildings, with targeted soil injection to treat termite entry zones and protect against further damage."
+                        data-my="Rawatan tanah korektif digunakan untuk masalah anai-anai aktif di bangunan sedia ada, dengan suntikan tanah bersasar untuk merawat zon kemasukan anai-anai dan melindungi daripada kerosakan lanjut.">
+                        Corrective soil treatment is used for active termite problems in existing buildings, with targeted soil injection to treat termite entry zones and protect against further damage.</p>
+
+                    <h4 class="t" data-en="What We Do:" data-my="Apa Yang Kami Buat:"
+                        style="margin-top: 24px; color: var(--primary);">What We Do:</h4>
+                    <ul class="features-list">
+                        <li class="t" data-en="Identify active termite zones and likely entry points"
+                            data-my="Kenal pasti zon anai-anai aktif dan titik masuk yang berkemungkinan">Identify active termite zones and likely entry points</li>
+                        <li class="t" data-en="Inject treatment directly into targeted soil areas"
+                            data-my="Suntik rawatan terus ke kawasan tanah bersasar">Inject treatment directly into targeted soil areas</li>
+                        <li class="t" data-en="Treat hidden pathways near walls, doors, and structural edges"
+                            data-my="Rawat laluan tersembunyi berhampiran dinding, pintu dan tepi struktur">Treat hidden pathways near walls, doors, and structural edges</li>
+                        <li class="t" data-en="Provide follow-up advice for long-term termite control"
+                            data-my="Berikan nasihat susulan untuk kawalan anai-anai jangka panjang">Provide follow-up advice for long-term termite control</li>
+                    </ul>
+
+                    <div
+                        style="background: rgba(10, 125, 95, 0.05); padding: 20px; border-radius: 12px; margin-top: 24px;">
+                        <p style="margin: 0; font-weight: 600;" class="t"
+                            data-en="Best for existing homes, shoplots, offices, and buildings with active termite activity or visible signs of termite entry."
+                            data-my="Sesuai untuk rumah, lot kedai, pejabat dan bangunan sedia ada yang mempunyai aktiviti anai-anai aktif atau tanda kemasukan anai-anai.">Best for existing homes, shoplots, offices, and buildings with active termite activity or visible signs of termite entry.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Other Pest Control Services -->
+        <div class="text-center mb-4" style="margin-top: 52px;">
+            <h2 class="t" data-en="Other Pest Control Services" data-my="Perkhidmatan Kawalan Serangga Lain">Other Pest Control Services</h2>
+            <p class="t"
+                data-en="Additional pest control services for homes, offices, restaurants, commercial spaces, and outdoor areas."
+                data-my="Perkhidmatan kawalan serangga tambahan untuk rumah, pejabat, restoran, premis komersial dan kawasan luar.">
+                Additional pest control services for homes, offices, restaurants, commercial spaces, and outdoor areas.</p>
         </div>
 
         <!-- Cockroach Treatment -->
@@ -1705,7 +1905,7 @@
             <div class="service-detail-layout">
                 <div>
                     <div class="service-image-wrap">
-                        <img class="service-detail-image" src="./images/services/service-bed-bug.png"
+                        <img class="service-detail-image" src="./images/services/service-bed-bugs.png"
                             alt="Bed bug treatment service image"
                             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                     </div>
