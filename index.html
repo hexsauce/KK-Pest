@@ -9,7 +9,7 @@
 
     <!-- SEO -->
     <meta name="description"
-        content="KK Pest Control Kota Kinabalu – Professional termite control (anai-anai), cockroach removal (lipas), rat control (tikus), bed bug treatment (pepijat), mosquito fogging (nyamuk) in Sabah. Licensed pest control services since 1991. Fast response, affordable packages, experienced technicians. Serving Penampang, Putatan, Papar, Tuaran, Likas, Bundusan, Tanjung Aru. Perkhidmatan kawalan serangga profesional di Sabah - anai-anai, lipas, tikus, pepijat, nyamuk. Berlesen, murah, pantas.">
+        content="KK Pest Control Kota Kinabalu – Professional termite control (anai-anai), cockroach treatment (lipas), rodent control (tikus), mosquito fogging (nyamuk), bed bug treatment (pepijat), general pest control, gecko control, and bird control in Sabah. Licensed pest control services since 1991. Fast response, affordable packages, experienced technicians. Serving Penampang, Putatan, Papar, Tuaran, Likas, Bundusan, Tanjung Aru. Perkhidmatan kawalan serangga profesional di Sabah - anai-anai, lipas, tikus, pepijat, nyamuk. Berlesen, murah, pantas.">
     <meta name="keywords"
         content="pest control kota kinabalu, pest control KK, pest control sabah, termite control kk, termite control sabah, anai anai kk, anai anai sabah, kawalan anai anai, cockroach control kk, lipas kk, rat control sabah, kawalan tikus, bed bug kk, pepijat kk, mosquito fogging kk, fogging nyamuk sabah, pest control penampang, pest control putatan, pest control papar, pest control tuaran, pest control likas, pest control bundusan, fumigation kk, kawalan serangga sabah, kawalan serangga kk, basmi anai anai, basmi lipas, basmi tikus, termite baiting, termite treatment, pest management sabah, commercial pest control kk, residential pest control sabah, restaurant pest control, office pest control kk, licensed pest control sabah, 24/7 pest control, emergency pest control kk, same day pest control, affordable pest control sabah, best pest control kk, professional pest control, eco friendly pest control, pet safe pest control sabah, kawalan perosak, syarikat kawalan serangga, perkhidmatan kawalan anai anai, rawatan anai anai, umpan anai anai, semburan lipas, perangkap tikus, fogging nyamuk, basmi pepijat, kawalan semut, exterminator kk, exterminator sabah, pest inspection kk, free pest inspection sabah, pest control price kk, pest control package sabah, termite inspection, termite prevention, cockroach extermination, rodent control, bedbug treatment, mosquito control, ant control, fly control, spider control, general pest control kk, integrated pest management sabah, IPM sabah, MPMA licensed, government approved pest control, kerja basmi anai anai, perkhidmatan fogging, syarikat pest control terbaik sabah">
     <meta name="author" content="KK Pest Control">
@@ -25,8 +25,8 @@
     <meta property="og:url" content="https://kkpestctrl.com">
     <meta property="og:title" content="KK Pest Control - Professional Pest Control Services Sabah | Kawalan Serangga">
     <meta property="og:description"
-        content="Licensed pest control services in Kota Kinabalu since 1991. Termite control, cockroach removal, rat control, bed bug treatment, mosquito fogging. Fast response, affordable prices. Perkhidmatan kawalan serangga berlesen - anai-anai, lipas, tikus, pepijat, nyamuk.">
-    <meta property="og:image" content="/images/logo.jpeg">
+        content="Licensed pest control services in Kota Kinabalu since 1991. Termite control, cockroach treatment, rodent control, mosquito fogging, bed bug treatment, general pest control, gecko control, and bird control. Fast response, affordable prices. Perkhidmatan kawalan serangga berlesen - anai-anai, lipas, tikus, pepijat, nyamuk.">
+    <meta property="og:image" content="/images/logo.png">
     <meta property="og:locale" content="en_MY">
     <meta property="og:locale:alternate" content="ms_MY">
 
@@ -35,12 +35,12 @@
     <meta property="twitter:url" content="https://kkpestctrl.com">
     <meta property="twitter:title" content="KK Pest Control - Professional Pest Control Services Sabah">
     <meta property="twitter:description"
-        content="Licensed pest control services in Kota Kinabalu. Termite, cockroach, rat, bed bug, mosquito control. Fast response, affordable prices.">
+        content="Licensed pest control services in Kota Kinabalu. Termite, cockroach, rodent, mosquito, bed bug, general pest, gecko, and bird control. Fast response, affordable prices.">
     <meta property="twitter:image" content="./images/logo.jpeg">
 
     <!-- Additional SEO -->
     <link rel="canonical" href="https://kkpestctrl.com">
-    <link rel="icon" href="./images/logo.jpeg" type="image/x-icon">
+    <link rel="icon" href="./images/logo.png" type="image/x-icon">
     <meta name="theme-color" content="#0a7d5f">
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -375,6 +375,186 @@
             line-height: 1.6;
         }
 
+        .service-image-wrap {
+            width: 100%;
+            max-width: 320px;
+            margin: 0 auto 20px;
+        }
+
+        .service-image,
+        .service-image-placeholder {
+            width: 100%;
+            aspect-ratio: 2 / 3;
+            border-radius: var(--radius-md);
+        }
+
+        .service-image,
+        .service-detail-image {
+            object-fit: cover;
+            object-position: center top;
+            display: block;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .service-image-placeholder,
+        .service-detail-image-placeholder {
+            display: none;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 8px;
+            background: linear-gradient(135deg, rgba(10, 125, 95, 0.08), rgba(255, 149, 0, 0.12));
+            border: 2px dashed rgba(10, 125, 95, 0.25);
+            color: var(--text-muted);
+            text-align: center;
+            padding: 16px;
+        }
+
+        .service-image-placeholder span,
+        .service-detail-image-placeholder span {
+            font-size: 42px;
+            line-height: 1;
+        }
+
+        .service-image-placeholder small,
+        .service-detail-image-placeholder small {
+            font-size: 13px;
+            line-height: 1.4;
+        }
+
+        .service-detail-layout {
+            display: grid;
+            grid-template-columns: minmax(240px, 360px) 1fr;
+            gap: 28px;
+            align-items: start;
+        }
+
+        .service-detail-media {
+            width: 100%;
+            max-width: 360px;
+        }
+
+        .service-detail-layout > div:first-child .service-image-wrap {
+            max-width: 360px;
+            margin-bottom: 0;
+        }
+
+        .service-detail-image,
+        .service-detail-image-placeholder {
+            width: 100%;
+            aspect-ratio: 2 / 3;
+            border-radius: var(--radius-md);
+        }
+
+
+
+
+        /* SERVICE IMAGE LIGHTBOX */
+        .service-detail-image {
+            cursor: zoom-in;
+        }
+
+        .service-detail-image:focus {
+            outline: 4px solid rgba(10, 125, 95, 0.35);
+            outline-offset: 4px;
+        }
+
+        .image-lightbox {
+            position: fixed;
+            inset: 0;
+            z-index: 5000;
+            display: none;
+            background: rgba(0, 0, 0, 0.9);
+            padding: 20px;
+        }
+
+        .image-lightbox.active {
+            display: flex;
+            align-items: stretch;
+            justify-content: center;
+        }
+
+        .image-lightbox-content {
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            -webkit-overflow-scrolling: touch;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 56px 0 36px;
+        }
+
+        .image-lightbox-img {
+            width: min(92vw, 900px);
+            max-width: none;
+            height: auto;
+            border-radius: var(--radius-md);
+            box-shadow: 0 16px 60px rgba(0, 0, 0, 0.45);
+            background: white;
+        }
+
+        .image-lightbox-close {
+            position: fixed;
+            top: 16px;
+            right: 16px;
+            width: 44px;
+            height: 44px;
+            border: none;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.95);
+            color: var(--text-dark);
+            font-size: 28px;
+            line-height: 1;
+            cursor: pointer;
+            z-index: 5001;
+            box-shadow: var(--shadow-md);
+        }
+
+        .image-lightbox-close:hover {
+            background: white;
+            transform: scale(1.05);
+        }
+
+        .image-lightbox-hint {
+            position: fixed;
+            left: 50%;
+            bottom: 14px;
+            transform: translateX(-50%);
+            color: rgba(255, 255, 255, 0.78);
+            font-size: 13px;
+            text-align: center;
+            pointer-events: none;
+            z-index: 5001;
+            width: calc(100% - 32px);
+        }
+
+        body.lightbox-open {
+            overflow: hidden;
+        }
+
+        @media (max-width: 768px) {
+            .image-lightbox {
+                padding: 10px;
+            }
+
+            .image-lightbox-content {
+                padding: 58px 0 38px;
+                justify-content: flex-start;
+            }
+
+            .image-lightbox-img {
+                width: calc(100vw - 20px);
+                border-radius: var(--radius-sm);
+            }
+
+            .image-lightbox-close {
+                top: 10px;
+                right: 10px;
+            }
+        }
+
+
         /* TYPOGRAPHY */
         h1,
         h2,
@@ -665,6 +845,117 @@
             box-shadow: var(--shadow-md);
         }
 
+
+        /* CLIENT / PAST JOBS SECTION */
+        .client-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px;
+            margin-top: 32px;
+        }
+
+        .client-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+            overflow: hidden;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .client-card:hover {
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-4px);
+        }
+
+        .client-logo-wrap {
+            min-height: 180px;
+            padding: 28px;
+            background: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .client-logo {
+            max-width: 100%;
+            max-height: 130px;
+            object-fit: contain;
+            display: block;
+        }
+
+        .client-logo-placeholder {
+            width: 100%;
+            min-height: 130px;
+            border: 2px dashed rgba(10, 125, 95, 0.25);
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--text-muted);
+            background: linear-gradient(135deg, rgba(10, 125, 95, 0.05), rgba(255, 149, 0, 0.08));
+            padding: 16px;
+            font-weight: 600;
+        }
+
+        .client-content {
+            padding: 28px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .client-content h3 {
+            color: var(--primary-dark);
+            margin-bottom: 8px;
+            text-align: left;
+        }
+
+        .client-meta {
+            color: var(--text-muted);
+            font-size: 14px;
+            margin-bottom: 16px;
+            line-height: 1.7;
+        }
+
+        .client-service-tag {
+            display: inline-flex;
+            align-items: center;
+            width: fit-content;
+            padding: 8px 12px;
+            border-radius: 999px;
+            background: rgba(10, 125, 95, 0.08);
+            color: var(--primary-dark);
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .testimonial-box {
+            background: rgba(10, 125, 95, 0.05);
+            border-left: 4px solid var(--primary);
+            border-radius: var(--radius-sm);
+            padding: 16px;
+            margin-top: auto;
+        }
+
+        .testimonial-box p {
+            margin: 0;
+            font-size: 15px;
+        }
+
+        .placeholder-note {
+            color: var(--text-muted);
+            font-size: 13px;
+            font-style: italic;
+            margin-top: 10px;
+        }
+
+
         /* RESPONSIVE */
         @media (max-width: 758px) {
             .job-image {
@@ -759,6 +1050,26 @@
                 grid-template-columns: 1fr;
                 gap: 20px;
             }
+
+            .service-image-wrap {
+                max-width: 360px;
+            }
+
+            .service-detail-layout {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .service-detail-media {
+                max-width: 420px;
+                margin: 0 auto;
+            }
+
+            .service-detail-layout > div:first-child .service-image-wrap {
+                max-width: 420px;
+                margin: 0 auto;
+            }
+
 
             .stats {
                 grid-template-columns: repeat(2, 1fr);
@@ -958,10 +1269,20 @@
 
 <body>
 
+
+    <!-- SERVICE IMAGE LIGHTBOX -->
+    <div id="imageLightbox" class="image-lightbox" onclick="handleLightboxBackdropClick(event)" aria-hidden="true">
+        <button class="image-lightbox-close" type="button" onclick="closeImageLightbox()" aria-label="Close image preview">×</button>
+        <div class="image-lightbox-content">
+            <img id="imageLightboxImg" class="image-lightbox-img" src="" alt="">
+        </div>
+        <div class="image-lightbox-hint">Scroll to read the full image • Tap outside or press Esc to close</div>
+    </div>
+
     <header>
         <div class="header-content">
             <div class="logo-section">
-                <img onclick="showPage('home'); closeMenu();" src="./images/logo.jpeg" alt="KK Pest Control Logo"
+                <img onclick="showPage('home'); closeMenu();" src="./images/logo.png" alt="KK Pest Control Logo"
                     class="logo">
                 <span class="brand-text t" data-en="KK Pest Control" data-my="KK Pest Control"></span>
             </div>
@@ -1084,48 +1405,44 @@
                 <div class="service-card">
                     <div class="service-icon">🐜</div>
                     <h3 class="t" data-en="Termite Control" data-my="Kawalan Anai-anai">Termite Control</h3>
-                    <p class="t"
-                        data-en="Advanced baiting systems and soil treatment to eliminate termite colonies completely"
-                        data-my="Sistem umpan canggih dan rawatan tanah untuk membasmi koloni anai-anai sepenuhnya">
-                        Advanced baiting systems and soil treatment to eliminate termite colonies completely</p>
+                    <p class="t" data-en="Protect your home or business from termites with inspection, treatment, baiting, and prevention plans." data-my="Lindungi rumah atau premis anda daripada anai-anai dengan pemeriksaan, rawatan, umpan dan pencegahan.">Protect your home or business from termites with inspection, treatment, baiting, and prevention plans.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">🪳</div>
-                    <h3 class="t" data-en="Cockroach Removal" data-my="Pembasmian Lipas">Cockroach Removal</h3>
-                    <p class="t" data-en="Targeted gel treatments and comprehensive sanitation for long-lasting results"
-                        data-my="Rawatan gel bersasar dan sanitasi menyeluruh untuk hasil yang berkekalan">Targeted gel
-                        treatments and comprehensive sanitation for long-lasting results</p>
+                    <h3 class="t" data-en="Cockroach Treatment" data-my="Rawatan Lipas">Cockroach Treatment</h3>
+                    <p class="t" data-en="Target cockroach infestations in kitchens, restaurants, homes, drains, and hidden breeding areas." data-my="Sasarkan masalah lipas di dapur, restoran, rumah, longkang dan kawasan pembiakan tersembunyi.">Target cockroach infestations in kitchens, restaurants, homes, drains, and hidden breeding areas.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">🐭</div>
                     <h3 class="t" data-en="Rodent Control" data-my="Kawalan Tikus">Rodent Control</h3>
-                    <p class="t" data-en="Humane trapping and exclusion methods to keep your property rodent-free"
-                        data-my="Perangkap berperikemanusiaan dan kaedah pengecualian untuk menghalang tikus">Humane
-                        trapping and exclusion methods to keep your property rodent-free</p>
+                    <p class="t" data-en="Control rats and mice with inspection, trapping, bait stations, entry-point checks, and monitoring." data-my="Kawal tikus dengan pemeriksaan, perangkap, stesen umpan, semakan titik masuk dan pemantauan.">Control rats and mice with inspection, trapping, bait stations, entry-point checks, and monitoring.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">🦟</div>
                     <h3 class="t" data-en="Mosquito Fogging" data-my="Fogging Nyamuk">Mosquito Fogging</h3>
-                    <p class="t" data-en="Thermal and ULV fogging for immediate mosquito population reduction"
-                        data-my="Fogging terma dan ULV untuk pengurangan populasi nyamuk segera">Thermal and ULV fogging
-                        for immediate mosquito population reduction</p>
+                    <p class="t" data-en="Reduce mosquito populations for homes, compounds, events, offices, and commercial areas." data-my="Kurangkan populasi nyamuk untuk rumah, kawasan luar, acara, pejabat dan premis komersial.">Reduce mosquito populations for homes, compounds, events, offices, and commercial areas.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">🛏️</div>
                     <h3 class="t" data-en="Bed Bug Treatment" data-my="Rawatan Pepijat">Bed Bug Treatment</h3>
-                    <p class="t" data-en="Heat treatment and chemical solutions to eliminate all bed bug life stages"
-                        data-my="Rawatan haba dan kimia untuk membasmi semua peringkat hidup pepijat">Heat treatment and
-                        chemical solutions to eliminate all bed bug life stages</p>
+                    <p class="t" data-en="Treat bed bugs in bedrooms, mattresses, furniture, hotels, hostels, and rental units." data-my="Rawat pepijat di bilik tidur, tilam, perabot, hotel, hostel dan unit sewa.">Treat bed bugs in bedrooms, mattresses, furniture, hotels, hostels, and rental units.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🛡️</div>
+                    <h3 class="t" data-en="General Pest Control" data-my="Kawalan Serangga Am">General Pest Control</h3>
+                    <p class="t" data-en="General protection against common pests such as ants, flies, spiders, and other nuisance pests." data-my="Perlindungan umum terhadap serangga biasa seperti semut, lalat, labah-labah dan perosak lain.">General protection against common pests such as ants, flies, spiders, and other nuisance pests.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">🦎</div>
-                    <h3 class="t" data-en="General Pest Control" data-my="Kawalan Serangga Am">General Pest Control</h3>
-                    <p class="t" data-en="Complete protection against ants, flies, spiders, and other common pests"
-                        data-my="Perlindungan lengkap terhadap semut, lalat, labah-labah dan serangga biasa">Complete
-                        protection against ants, flies, spiders, and other common pests</p>
+                    <h3 class="t" data-en="Gecko Control" data-my="Kawalan Cicak">Gecko Control</h3>
+                    <p class="t" data-en="Manage gecko issues around homes, shops, ceilings, signage, kitchens, and commercial premises." data-my="Urus masalah cicak di rumah, kedai, siling, papan tanda, dapur dan premis komersial.">Manage gecko issues around homes, shops, ceilings, signage, kitchens, and commercial premises.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🐦</div>
+                    <h3 class="t" data-en="Bird Control" data-my="Kawalan Burung">Bird Control</h3>
+                    <p class="t" data-en="Control bird nuisance, droppings, nesting, and roosting problems around buildings and signage." data-my="Kawal gangguan burung, najis, sarang dan masalah burung bertenggek di bangunan dan papan tanda.">Control bird nuisance, droppings, nesting, and roosting problems around buildings and signage.</p>
                 </div>
             </div>
-
 
             <!-- Additional service cards continue... -->
             <div class="text-center mt-12">
@@ -1153,248 +1470,264 @@
                 Professional pest management services backed by science, experience, and guaranteed results</p>
         </div>
 
+        <!-- Service cards -->
         <!-- Termite Control -->
-        <div class="card fade-in">
-            <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 20px;">
-                <div class="service-icon" style="margin: 0;">🐜</div>
-                <h3 class="t" data-en="Termite Control & Treatment" data-my="Kawalan & Rawatan Anai-anai"
-                    style="margin: 0; text-align: left;">Termite Control & Treatment</h3>
-            </div>
+        <div class="card fade-in service-detail-card">
+            <div class="service-detail-layout">
+                <div>
+                    <div class="service-image-wrap">
+                        <img class="service-detail-image" src="./images/services/service-termite.png" alt="Termite Control service image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    </div>
+                </div>
+                <div>
+                    <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 20px;">
+                        <div class="service-icon" style="margin: 0;">🐜</div>
+                        <h3 class="t" data-en="Termite Control" data-my="Kawalan Anai-anai" style="margin: 0; text-align: left;">Termite Control</h3>
+                    </div>
 
-            <p class="t"
-                data-en="Termites cause billions in property damage annually. Our comprehensive termite solutions protect your most valuable investment with proven baiting systems and soil barrier treatments."
-                data-my="Anai-anai menyebabkan kerosakan harta berbilion ringgit setiap tahun. Penyelesaian anai-anai menyeluruh kami melindungi pelaburan anda yang paling berharga dengan sistem umpan dan rawatan penghalang tanah yang terbukti.">
-                Termites cause billions in property damage annually. Our comprehensive termite solutions protect your
-                most valuable investment with proven baiting systems and soil barrier treatments.</p>
+                    <p class="t" data-en="Protect your home or business from termites with inspection, treatment, baiting, and prevention plans." data-my="Lindungi rumah atau premis anda daripada anai-anai dengan pemeriksaan, rawatan, umpan dan pencegahan.">Protect your home or business from termites with inspection, treatment, baiting, and prevention plans.</p>
 
-            <h4 class="t" data-en="Our Termite Services Include:" data-my="Perkhidmatan Anai-anai Kami Termasuk:"
-                style="margin-top: 24px; color: var(--primary);">Our Termite Services Include:</h4>
-            <ul class="features-list">
-                <li class="t" data-en="Complete termite inspection using advanced detection tools"
-                    data-my="Pemeriksaan anai-anai lengkap menggunakan alat pengesanan canggih">Complete termite
-                    inspection using advanced detection tools</li>
-                <li class="t" data-en="Termite baiting systems (Sentricon, Exterra) - eco-friendly colony elimination"
-                    data-my="Sistem umpan anai-anai (Sentricon, Exterra) - pembasmian koloni mesra alam">Termite baiting
-                    systems (Sentricon, Exterra) - eco-friendly colony elimination</li>
-                <li class="t" data-en="Soil treatment with Termidor - creates protective barrier around property"
-                    data-my="Rawatan tanah dengan Termidor - mencipta penghalang pelindung di sekeliling harta">Soil
-                    treatment with Termidor - creates protective barrier around property</li>
-                <li class="t" data-en="Pre-construction anti-termite treatment for new buildings"
-                    data-my="Rawatan anti-anai-anai pra-pembinaan untuk bangunan baru">Pre-construction anti-termite
-                    treatment for new buildings</li>
-                <li class="t" data-en="Post-construction treatment for existing structures"
-                    data-my="Rawatan pasca-pembinaan untuk struktur sedia ada">Post-construction treatment for existing
-                    structures</li>
-                <li class="t" data-en="Annual inspection and monitoring service"
-                    data-my="Perkhidmatan pemeriksaan dan pemantauan tahunan">Annual inspection and monitoring service
-                </li>
-            </ul>
+                    <h4 class="t" data-en="What We Do:" data-my="Apa Yang Kami Buat:" style="margin-top: 24px; color: var(--primary);">What We Do:</h4>
+                    <ul class="features-list">
+                <li class="t" data-en="Termite inspection and activity checks" data-my="Pemeriksaan dan semakan aktiviti anai-anai">Termite inspection and activity checks</li>
+                <li class="t" data-en="Baiting and colony control options" data-my="Pilihan umpan dan kawalan koloni">Baiting and colony control options</li>
+                <li class="t" data-en="Soil or structural treatment where needed" data-my="Rawatan tanah atau struktur jika diperlukan">Soil or structural treatment where needed</li>
+                <li class="t" data-en="Prevention advice and follow-up monitoring" data-my="Nasihat pencegahan dan pemantauan susulan">Prevention advice and follow-up monitoring</li>
+                    </ul>
 
-            <div style="background: rgba(10, 125, 95, 0.05); padding: 20px; border-radius: 12px; margin-top: 24px;">
-                <p style="margin: 0; font-weight: 600;" class="t"
-                    data-en="⚡ Fast Response: Same-day inspection available | 🛡️ 5-year warranty on baiting systems"
-                    data-my="⚡ Respons Pantas: Pemeriksaan hari sama tersedia | 🛡️ Waranti 5 tahun untuk sistem umpan">
-                    ⚡ Fast Response: Same-day inspection available | 🛡️ 5-year warranty on
-                    baiting systems</p>
+                    <div style="background: rgba(10, 125, 95, 0.05); padding: 20px; border-radius: 12px; margin-top: 24px;">
+                        <p style="margin: 0; font-weight: 600;" class="t" data-en="Ideal for homes, shops, offices, and commercial buildings." data-my="Sesuai untuk rumah, kedai, pejabat dan bangunan komersial.">Ideal for homes, shops, offices, and commercial buildings.</p>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <!-- Cockroach Control -->
-        <div class="card fade-in">
-            <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 20px;">
-                <div class="service-icon" style="margin: 0;">🪳</div>
-                <h3 class="t" data-en="Cockroach Extermination" data-my="Pembasmian Lipas"
-                    style="margin: 0; text-align:left">Cockroach
-                    Extermination</h3>
-            </div>
+        <!-- Cockroach Treatment -->
+        <div class="card fade-in service-detail-card">
+            <div class="service-detail-layout">
+                <div>
+                    <div class="service-image-wrap">
+                        <img class="service-detail-image" src="./images/services/cockroach-treatment.jpg" alt="Cockroach Treatment service image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="service-detail-image-placeholder">
+                            <span>🪳</span>
+                            <small>Replace image: ./images/services/cockroach-treatment.jpg</small>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 20px;">
+                        <div class="service-icon" style="margin: 0;">🪳</div>
+                        <h3 class="t" data-en="Cockroach Treatment" data-my="Rawatan Lipas" style="margin: 0; text-align: left;">Cockroach Treatment</h3>
+                    </div>
 
-            <p class="t"
-                data-en="Cockroaches spread diseases and multiply rapidly. Our targeted treatments eliminate cockroaches at all life stages and prevent future infestations through strategic placement and sanitation guidance."
-                data-my="Lipas menyebarkan penyakit dan membiak dengan cepat. Rawatan bersasar kami membasmi lipas di semua peringkat kehidupan dan menghalang serangan masa depan melalui peletakan strategik dan panduan sanitasi.">
-                Cockroaches spread diseases and multiply rapidly. Our targeted treatments eliminate cockroaches at all
-                life stages and prevent future infestations through strategic placement and sanitation guidance.</p>
+                    <p class="t" data-en="Target cockroach infestations in kitchens, restaurants, homes, drains, and hidden breeding areas." data-my="Sasarkan masalah lipas di dapur, restoran, rumah, longkang dan kawasan pembiakan tersembunyi.">Target cockroach infestations in kitchens, restaurants, homes, drains, and hidden breeding areas.</p>
 
-            <h4 class="t" data-en="Treatment Methods:" data-my="Kaedah Rawatan:"
-                style="margin-top: 24px; color: var(--primary);">Treatment Methods:</h4>
-            <ul class="features-list">
-                <li class="t" data-en="German cockroach gel baiting - highly effective for restaurants and kitchens"
-                    data-my="Umpan gel lipas Jerman - sangat berkesan untuk restoran dan dapur">German cockroach gel
-                    baiting - highly effective for restaurants and kitchens</li>
-                <li class="t" data-en="Residual spray treatment for walls, cracks, and hiding spots"
-                    data-my="Rawatan semburan sisa untuk dinding, celah dan tempat persembunyian">Residual spray
-                    treatment for walls, cracks, and hiding spots</li>
-                <li class="t" data-en="ULV (Ultra Low Volume) fogging for severe infestations"
-                    data-my="Fogging ULV (Ultra Low Volume) untuk serangan teruk">ULV (Ultra Low Volume) fogging for
-                    severe infestations</li>
-                <li class="t" data-en="Insect growth regulators to break breeding cycle"
-                    data-my="Pengawal pertumbuhan serangga untuk memecah kitaran pembiakan">Insect growth regulators to
-                    break breeding cycle</li>
-                <li class="t" data-en="Sanitation consultation and prevention tips"
-                    data-my="Konsultasi sanitasi dan tips pencegahan">Sanitation consultation and prevention tips</li>
-                <li class="t" data-en="Monthly or quarterly maintenance programs available"
-                    data-my="Program penyelenggaraan bulanan atau suku tahunan tersedia">Monthly or quarterly
-                    maintenance programs available</li>
-            </ul>
+                    <h4 class="t" data-en="What We Do:" data-my="Apa Yang Kami Buat:" style="margin-top: 24px; color: var(--primary);">What We Do:</h4>
+                    <ul class="features-list">
+                <li class="t" data-en="Gel baiting for active infestation areas" data-my="Umpan gel untuk kawasan serangan aktif">Gel baiting for active infestation areas</li>
+                <li class="t" data-en="Residual spray for cracks and hiding spots" data-my="Semburan residual untuk celah dan tempat persembunyian">Residual spray for cracks and hiding spots</li>
+                <li class="t" data-en="ULV fogging for heavier infestations" data-my="Fogging ULV untuk serangan lebih berat">ULV fogging for heavier infestations</li>
+                <li class="t" data-en="Sanitation and prevention guidance" data-my="Panduan kebersihan dan pencegahan">Sanitation and prevention guidance</li>
+                    </ul>
 
-            <div style="background: rgba(10, 125, 95, 0.05); padding: 20px; border-radius: 12px; margin-top: 24px;">
-                <p style="margin: 0; font-weight: 600;" class="t"
-                    data-en="✓ Safe for food preparation areas | 📅 3-month warranty with follow-up"
-                    data-my="✓ Selamat untuk kawasan penyediaan makanan | 📅 Waranti 3 bulan dengan susulan">
-                    ✓ Safe for food preparation areas | 📅 3-month warranty with follow-up</p>
+                    <div style="background: rgba(10, 125, 95, 0.05); padding: 20px; border-radius: 12px; margin-top: 24px;">
+                        <p style="margin: 0; font-weight: 600;" class="t" data-en="Suitable for homes, restaurants, cafes, offices, and food preparation areas." data-my="Sesuai untuk rumah, restoran, kafe, pejabat dan kawasan penyediaan makanan.">Suitable for homes, restaurants, cafes, offices, and food preparation areas.</p>
+                    </div>
+                </div>
             </div>
         </div>
 
         <!-- Rodent Control -->
-        <div class="card fade-in">
-            <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 20px;">
-                <div class="service-icon" style="margin: 0;">🐭</div>
-                <h3 class="t" data-en="Rodent Control & Exclusion" data-my="Kawalan & Pengecualian Tikus"
-                    style="margin: 0; text-align: left"></h3>
-            </div>
+        <div class="card fade-in service-detail-card">
+            <div class="service-detail-layout">
+                <div>
+                    <div class="service-image-wrap">
+                        <img class="service-detail-image" src="./images/services/service-rodent.png" alt="Rodent Control service image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    </div>
+                </div>
+                <div>
+                    <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 20px;">
+                        <div class="service-icon" style="margin: 0;">🐭</div>
+                        <h3 class="t" data-en="Rodent Control" data-my="Kawalan Tikus" style="margin: 0; text-align: left;">Rodent Control</h3>
+                    </div>
 
-            <p class="t"
-                data-en="Rats and mice contaminate food, damage property, and pose serious health risks. Our integrated approach combines trapping, exclusion, and monitoring to keep your property rodent-free."
-                data-my="Tikus mencemarkan makanan, merosakkan harta dan menimbulkan risiko kesihatan yang serius. Pendekatan bersepadu kami menggabungkan perangkap, pengecualian dan pemantauan untuk memastikan harta anda bebas tikus.">
-            </p>
+                    <p class="t" data-en="Control rats and mice with inspection, trapping, bait stations, entry-point checks, and monitoring." data-my="Kawal tikus dengan pemeriksaan, perangkap, stesen umpan, semakan titik masuk dan pemantauan.">Control rats and mice with inspection, trapping, bait stations, entry-point checks, and monitoring.</p>
 
-            <h4 class="t" data-en="Our Rodent Program:" data-my="Program Tikus Kami:"
-                style="margin-top: 24px; color: var(--primary);"></h4>
-            <ul class="features-list">
-                <li class="t" data-en="Comprehensive property inspection to identify entry points and nesting areas"
-                    data-my="Pemeriksaan harta menyeluruh untuk mengenal pasti titik masuk dan kawasan bersarang"></li>
-                <li class="t" data-en="Snap traps and live traps strategically placed for maximum effectiveness"
-                    data-my="Perangkap snap dan perangkap hidup diletakkan secara strategik untuk keberkesanan maksimum">
-                </li>
-                <li class="t" data-en="Rodenticide bait stations (for outdoor/commercial use only)"
-                    data-my="Stesen umpan racun tikus (untuk kegunaan luar/komersial sahaja)"></li>
-                <li class="t" data-en="Exclusion work - sealing entry points with steel wool, wire mesh, and foam"
-                    data-my="Kerja pengecualian - menutup titik masuk dengan bulu keluli, jeriji wayar dan buih"></li>
-                <li class="t" data-en="Monitoring cameras and motion sensors for large premises"
-                    data-my="Kamera pemantauan dan sensor gerakan untuk premis besar"></li>
-                <li class="t" data-en="Cleanup and sanitation of contaminated areas"
-                    data-my="Pembersihan dan sanitasi kawasan tercemar"></li>
-            </ul>
+                    <h4 class="t" data-en="What We Do:" data-my="Apa Yang Kami Buat:" style="margin-top: 24px; color: var(--primary);">What We Do:</h4>
+                    <ul class="features-list">
+                <li class="t" data-en="Identify entry points and nesting areas" data-my="Kenal pasti titik masuk dan kawasan sarang">Identify entry points and nesting areas</li>
+                <li class="t" data-en="Strategic traps and bait stations" data-my="Perangkap dan stesen umpan secara strategik">Strategic traps and bait stations</li>
+                <li class="t" data-en="Entry-point sealing recommendations" data-my="Cadangan penutupan titik masuk">Entry-point sealing recommendations</li>
+                <li class="t" data-en="Monitoring until rodent activity is reduced" data-my="Pemantauan sehingga aktiviti tikus berkurang">Monitoring until rodent activity is reduced</li>
+                    </ul>
 
-            <div style="background: rgba(10, 125, 95, 0.05); padding: 20px; border-radius: 12px; margin-top: 24px;">
-                <p style="margin: 0; font-weight: 600;" class="t"
-                    data-en="🏠 Humane methods available | 🔄 Weekly monitoring until eliminated"
-                    data-my="🏠 Kaedah berperikemanusiaan tersedia | 🔄 Pemantauan mingguan sehingga dibasmi">
-                </p>
+                    <div style="background: rgba(10, 125, 95, 0.05); padding: 20px; border-radius: 12px; margin-top: 24px;">
+                        <p style="margin: 0; font-weight: 600;" class="t" data-en="Recommended for homes, shops, food businesses, storerooms, and warehouses." data-my="Disyorkan untuk rumah, kedai, perniagaan makanan, stor dan gudang.">Recommended for homes, shops, food businesses, storerooms, and warehouses.</p>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <!-- Mosquito Control -->
-        <div class="card fade-in">
-            <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 20px;">
-                <div class="service-icon" style="margin: 0;">🦟</div>
-                <h3 class="t" data-en="Mosquito Fogging & Control" data-my="Fogging & Kawalan Nyamuk"
-                    style="margin: 0; text-align: left"></h3>
-            </div>
+        <!-- Mosquito Fogging -->
+        <div class="card fade-in service-detail-card">
+            <div class="service-detail-layout">
+                <div>
+                    <div class="service-image-wrap">
+                        <img class="service-detail-image" src="./images/services/service-mosquito.png" alt="Mosquito Fogging service image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    </div>
+                </div>
+                <div>
+                    <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 20px;">
+                        <div class="service-icon" style="margin: 0;">🦟</div>
+                        <h3 class="t" data-en="Mosquito Fogging" data-my="Fogging Nyamuk" style="margin: 0; text-align: left;">Mosquito Fogging</h3>
+                    </div>
 
-            <p class="t"
-                data-en="Protect your family and employees from dengue, malaria, and other mosquito-borne diseases. Our fogging services provide immediate relief, while larviciding prevents future breeding."
-                data-my="Lindungi keluarga dan pekerja anda daripada denggi, malaria dan penyakit bawaan nyamuk yang lain. Perkhidmatan fogging kami memberikan kelegaan segera, manakala larvisida menghalang pembiakan masa depan.">
-            </p>
+                    <p class="t" data-en="Reduce mosquito populations for homes, compounds, events, offices, and commercial areas." data-my="Kurangkan populasi nyamuk untuk rumah, kawasan luar, acara, pejabat dan premis komersial.">Reduce mosquito populations for homes, compounds, events, offices, and commercial areas.</p>
 
-            <h4 class="t" data-en="Mosquito Control Services:" data-my="Perkhidmatan Kawalan Nyamuk:"
-                style="margin-top: 24px; color: var(--primary);"></h4>
-            <ul class="features-list">
-                <li class="t" data-en="Thermal fogging - dense fog for outdoor events and large areas"
-                    data-my="Fogging terma - kabus tebal untuk acara luar dan kawasan besar"></li>
-                <li class="t" data-en="ULV cold fogging - fine mist for residential and commercial properties"
-                    data-my="Fogging sejuk ULV - kabus halus untuk harta kediaman dan komersial"></li>
-                <li class="t" data-en="Larviciding treatment for drains, ponds, and standing water"
-                    data-my="Rawatan larvisida untuk longkang, kolam dan air bertakung"></li>
-                <li class="t" data-en="Residual spray treatment for walls and resting surfaces"
-                    data-my="Rawatan semburan sisa untuk dinding dan permukaan berehat"></li>
-                <li class="t" data-en="Breeding source elimination inspection and guidance"
-                    data-my="Pemeriksaan dan panduan pembasmian punca pembiakan"></li>
-                <li class="t" data-en="Pre-event fogging for weddings, parties, and corporate functions"
-                    data-my="Fogging pra-acara untuk perkahwinan, pesta dan majlis korporat"></li>
-            </ul>
+                    <h4 class="t" data-en="What We Do:" data-my="Apa Yang Kami Buat:" style="margin-top: 24px; color: var(--primary);">What We Do:</h4>
+                    <ul class="features-list">
+                <li class="t" data-en="Thermal fogging for outdoor spaces" data-my="Fogging terma untuk kawasan luar">Thermal fogging for outdoor spaces</li>
+                <li class="t" data-en="ULV fogging for selected areas" data-my="Fogging ULV untuk kawasan tertentu">ULV fogging for selected areas</li>
+                <li class="t" data-en="Breeding source inspection" data-my="Pemeriksaan punca pembiakan">Breeding source inspection</li>
+                <li class="t" data-en="Regular fogging packages available" data-my="Pakej fogging berkala tersedia">Regular fogging packages available</li>
+                    </ul>
 
-            <div style="background: rgba(10, 125, 95, 0.05); padding: 20px; border-radius: 12px; margin-top: 24px;">
-                <p style="margin: 0; font-weight: 600;" class="t"
-                    data-en="⚡ Same-day service | 📅 Weekly/monthly packages available"
-                    data-my="⚡ Perkhidmatan hari sama | 📅 Pakej mingguan/bulanan tersedia">
-                </p>
+                    <div style="background: rgba(10, 125, 95, 0.05); padding: 20px; border-radius: 12px; margin-top: 24px;">
+                        <p style="margin: 0; font-weight: 600;" class="t" data-en="Useful for dengue prevention, outdoor events, residential areas, and workplaces." data-my="Berguna untuk pencegahan denggi, acara luar, kawasan kediaman dan tempat kerja.">Useful for dengue prevention, outdoor events, residential areas, and workplaces.</p>
+                    </div>
+                </div>
             </div>
         </div>
 
         <!-- Bed Bug Treatment -->
-        <div class="card fade-in">
-            <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 20px;">
-                <div class="service-icon" style="margin: 0;">🛏️</div>
-                <h3 class="t" data-en="Bed Bug Heat Treatment" data-my="Rawatan Haba Pepijat"
-                    style="margin: 0; text-align:left"></h3>
-            </div>
+        <div class="card fade-in service-detail-card">
+            <div class="service-detail-layout">
+                <div>
+                    <div class="service-image-wrap">
+                        <img class="service-detail-image" src="./images/services/service-bed-bug.png" alt="Bed Bug Treatment service image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    </div>
+                </div>
+                <div>
+                    <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 20px;">
+                        <div class="service-icon" style="margin: 0;">🛏️</div>
+                        <h3 class="t" data-en="Bed Bug Treatment" data-my="Rawatan Pepijat" style="margin: 0; text-align: left;">Bed Bug Treatment</h3>
+                    </div>
 
-            <p class="t"
-                data-en="Bed bugs are notoriously difficult to eliminate. Our specialized heat treatment and chemical protocols target all life stages, including eggs, ensuring complete eradication."
-                data-my="Pepijat terkenal sukar untuk dibasmi. Rawatan haba khusus dan protokol kimia kami menyasarkan semua peringkat kehidupan, termasuk telur, memastikan pembasmian lengkap.">
-            </p>
+                    <p class="t" data-en="Treat bed bugs in bedrooms, mattresses, furniture, hotels, hostels, and rental units." data-my="Rawat pepijat di bilik tidur, tilam, perabot, hotel, hostel dan unit sewa.">Treat bed bugs in bedrooms, mattresses, furniture, hotels, hostels, and rental units.</p>
 
-            <h4 class="t" data-en="Bed Bug Solutions:" data-my="Penyelesaian Pepijat:"
-                style="margin-top: 24px; color: var(--primary);"></h4>
-            <ul class="features-list">
-                <li class="t" data-en="Thorough inspection with trained detection methods"
-                    data-my="Pemeriksaan menyeluruh dengan kaedah pengesanan terlatih"></li>
-                <li class="t" data-en="Heat treatment (60°C+) - chemical-free, kills all life stages in one session"
-                    data-my="Rawatan haba (60°C+) - bebas kimia, membunuh semua peringkat kehidupan dalam satu sesi">
-                </li>
-                <li class="t" data-en="Residual insecticide treatment for mattresses, furniture, and cracks"
-                    data-my="Rawatan racun serangga sisa untuk tilam, perabot dan celah"></li>
-                <li class="t" data-en="Steam treatment for sensitive items" data-my="Rawatan wap untuk barang sensitif">
-                </li>
-                <li class="t" data-en="Mattress and furniture encasements" data-my="Penutup tilam dan perabot"></li>
-                <li class="t" data-en="Follow-up inspections to ensure complete elimination"
-                    data-my="Pemeriksaan susulan untuk memastikan pembasmian lengkap"></li>
-            </ul>
+                    <h4 class="t" data-en="What We Do:" data-my="Apa Yang Kami Buat:" style="margin-top: 24px; color: var(--primary);">What We Do:</h4>
+                    <ul class="features-list">
+                <li class="t" data-en="Detailed inspection of beds and furniture" data-my="Pemeriksaan terperinci katil dan perabot">Detailed inspection of beds and furniture</li>
+                <li class="t" data-en="Targeted treatment for hiding spots" data-my="Rawatan bersasar untuk tempat persembunyian">Targeted treatment for hiding spots</li>
+                <li class="t" data-en="Steam or chemical treatment options" data-my="Pilihan rawatan wap atau kimia">Steam or chemical treatment options</li>
+                <li class="t" data-en="Follow-up advice to prevent reinfestation" data-my="Nasihat susulan untuk elak serangan semula">Follow-up advice to prevent reinfestation</li>
+                    </ul>
 
-            <div style="background: rgba(10, 125, 95, 0.05); padding: 20px; border-radius: 12px; margin-top: 24px;">
-                <p style="margin: 0; font-weight: 600;" class="t"
-                    data-en="🔥 99.9% elimination rate | 🔄 2 follow-up visits included"
-                    data-my="🔥 Kadar pembasmian 99.9% | 🔄 2 lawatan susulan disertakan">
-                </p>
+                    <div style="background: rgba(10, 125, 95, 0.05); padding: 20px; border-radius: 12px; margin-top: 24px;">
+                        <p style="margin: 0; font-weight: 600;" class="t" data-en="Best for homes, hotels, staff quarters, hostels, and rental rooms." data-my="Sesuai untuk rumah, hotel, kuarters pekerja, hostel dan bilik sewa.">Best for homes, hotels, staff quarters, hostels, and rental rooms.</p>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <!-- General Pest -->
-        <div class="card fade-in">
-            <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 20px;">
-                <div class="service-icon" style="margin: 0;">🦎</div>
-                <h3 class="t" data-en="General Pest Management" data-my="Pengurusan Serangga Am"
-                    style="margin: 0; text-align: left">
-                </h3>
+        <!-- General Pest Control -->
+        <div class="card fade-in service-detail-card">
+            <div class="service-detail-layout">
+                <div>
+                    <div class="service-image-wrap">
+                        <img class="service-detail-image" src="./images/services/service-general.png" alt="General Pest Control service image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                   </div>
+                </div>
+                <div>
+                    <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 20px;">
+                        <div class="service-icon" style="margin: 0;">🛡️</div>
+                        <h3 class="t" data-en="General Pest Control" data-my="Kawalan Serangga Am" style="margin: 0; text-align: left;">General Pest Control</h3>
+                    </div>
+
+                    <p class="t" data-en="General protection against common pests such as ants, flies, spiders, and other nuisance pests." data-my="Perlindungan umum terhadap serangga biasa seperti semut, lalat, labah-labah dan perosak lain.">General protection against common pests such as ants, flies, spiders, and other nuisance pests.</p>
+
+                    <h4 class="t" data-en="What We Do:" data-my="Apa Yang Kami Buat:" style="margin-top: 24px; color: var(--primary);">What We Do:</h4>
+                    <ul class="features-list">
+                <li class="t" data-en="Indoor and outdoor pest inspection" data-my="Pemeriksaan serangga dalaman dan luaran">Indoor and outdoor pest inspection</li>
+                <li class="t" data-en="Targeted spray and treatment plan" data-my="Pelan semburan dan rawatan bersasar">Targeted spray and treatment plan</li>
+                <li class="t" data-en="Maintenance plans for recurring pests" data-my="Pelan penyelenggaraan untuk masalah berulang">Maintenance plans for recurring pests</li>
+                <li class="t" data-en="Prevention recommendations for long-term control" data-my="Cadangan pencegahan jangka panjang">Prevention recommendations for long-term control</li>
+                    </ul>
+
+                    <div style="background: rgba(10, 125, 95, 0.05); padding: 20px; border-radius: 12px; margin-top: 24px;">
+                        <p style="margin: 0; font-weight: 600;" class="t" data-en="A practical option when you are unsure what pest problem you have." data-my="Pilihan praktikal jika anda tidak pasti masalah perosak yang dihadapi.">A practical option when you are unsure what pest problem you have.</p>
+                    </div>
+                </div>
             </div>
+        </div>
 
-            <p class="t"
-                data-en="Comprehensive protection against ants, flies, spiders, silverfish, and other common household and commercial pests. Our integrated pest management approach ensures long-term prevention."
-                data-my="Perlindungan menyeluruh terhadap semut, lalat, labah-labah, ikan perak dan serangga biasa rumah dan komersial yang lain. Pendekatan pengurusan serangga bersepadu kami memastikan pencegahan jangka panjang.">
-            </p>
+        <!-- Gecko Control -->
+        <div class="card fade-in service-detail-card">
+            <div class="service-detail-layout">
+                <div>
+                    <div class="service-image-wrap">
+                        <img class="service-detail-image" src="./images/services/gecko-control.jpg" alt="Gecko Control service image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="service-detail-image-placeholder">
+                            <span>🦎</span>
+                            <small>Replace image: ./images/services/gecko-control.jpg</small>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 20px;">
+                        <div class="service-icon" style="margin: 0;">🦎</div>
+                        <h3 class="t" data-en="Gecko Control" data-my="Kawalan Cicak" style="margin: 0; text-align: left;">Gecko Control</h3>
+                    </div>
 
-            <h4 class="t" data-en="We Control:" data-my="Kami Kawal:" style="margin-top: 24px; color: var(--primary);">
-            </h4>
-            <ul class="features-list">
-                <li class="t" data-en="Ants (pharaoh ants, carpenter ants, fire ants) - colony elimination"
-                    data-my="Semut (semut firaun, semut tukang kayu, semut api) - pembasmian koloni"></li>
-                <li class="t" data-en="Flies (house flies, fruit flies) - trapping and breeding source control"
-                    data-my="Lalat (lalat rumah, lalat buah) - perangkap dan kawalan punca pembiakan"></li>
-                <li class="t" data-en="Spiders and centipedes - perimeter and indoor treatment"
-                    data-my="Labah-labah dan lipan - rawatan perimeter dan dalaman"></li>
-                <li class="t" data-en="Silverfish and firebrats - moisture control and treatment"
-                    data-my="Ikan perak dan firebrats - kawalan kelembapan dan rawatan"></li>
-                <li class="t" data-en="Wasps and hornets - nest removal and prevention"
-                    data-my="Tebuan dan lebah - penyingkiran sarang dan pencegahan"></li>
-                <li class="t" data-en="Preventive maintenance programs for pest-free environments"
-                    data-my="Program penyelenggaraan pencegahan untuk persekitaran bebas serangga"></li>
-            </ul>
+                    <p class="t" data-en="Manage gecko issues around homes, shops, ceilings, signage, kitchens, and commercial premises." data-my="Urus masalah cicak di rumah, kedai, siling, papan tanda, dapur dan premis komersial.">Manage gecko issues around homes, shops, ceilings, signage, kitchens, and commercial premises.</p>
 
-            <div style="background: rgba(10, 125, 95, 0.05); padding: 20px; border-radius: 12px; margin-top: 24px;">
-                <p style="margin: 0; font-weight: 600;" class="t"
-                    data-en="🏢 Perfect for homes, offices, restaurants | 📦 Annual packages save up to 30%"
-                    data-my="🏢 Sesuai untuk rumah, pejabat, restoran | 📦 Pakej tahunan jimat sehingga 30%">
-                </p>
+                    <h4 class="t" data-en="What We Do:" data-my="Apa Yang Kami Buat:" style="margin-top: 24px; color: var(--primary);">What We Do:</h4>
+                    <ul class="features-list">
+                <li class="t" data-en="Inspection of hiding and entry areas" data-my="Pemeriksaan kawasan persembunyian dan titik masuk">Inspection of hiding and entry areas</li>
+                <li class="t" data-en="Treatment around gecko activity zones" data-my="Rawatan di zon aktiviti cicak">Treatment around gecko activity zones</li>
+                <li class="t" data-en="Dropping and nuisance reduction strategy" data-my="Strategi mengurangkan najis dan gangguan cicak">Dropping and nuisance reduction strategy</li>
+                <li class="t" data-en="Prevention advice for food and light attractants" data-my="Nasihat pencegahan berkaitan makanan dan lampu">Prevention advice for food and light attractants</li>
+                    </ul>
+
+                    <div style="background: rgba(10, 125, 95, 0.05); padding: 20px; border-radius: 12px; margin-top: 24px;">
+                        <p style="margin: 0; font-weight: 600;" class="t" data-en="Helpful for restaurants, shoplots, homes, offices, and ceiling areas." data-my="Membantu untuk restoran, lot kedai, rumah, pejabat dan kawasan siling.">Helpful for restaurants, shoplots, homes, offices, and ceiling areas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bird Control -->
+        <div class="card fade-in service-detail-card">
+            <div class="service-detail-layout">
+                <div>
+                    <div class="service-image-wrap">
+                        <img class="service-detail-image" src="./images/services/service-bird.png" alt="Bird Control service image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="service-detail-image-placeholder">
+                            <span>🐦</span>
+                            <small>Replace image: ./images/services/bird-control.jpg</small>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 20px;">
+                        <div class="service-icon" style="margin: 0;">🐦</div>
+                        <h3 class="t" data-en="Bird Control" data-my="Kawalan Burung" style="margin: 0; text-align: left;">Bird Control</h3>
+                    </div>
+
+                    <p class="t" data-en="Control bird nuisance, droppings, nesting, and roosting problems around buildings and signage." data-my="Kawal gangguan burung, najis, sarang dan masalah burung bertenggek di bangunan dan papan tanda.">Control bird nuisance, droppings, nesting, and roosting problems around buildings and signage.</p>
+
+                    <h4 class="t" data-en="What We Do:" data-my="Apa Yang Kami Buat:" style="margin-top: 24px; color: var(--primary);">What We Do:</h4>
+                    <ul class="features-list">
+                <li class="t" data-en="Inspection of roosting and nesting spots" data-my="Pemeriksaan tempat burung bertenggek dan bersarang">Inspection of roosting and nesting spots</li>
+                <li class="t" data-en="Bird deterrent and exclusion recommendations" data-my="Cadangan halangan dan pengecualian burung">Bird deterrent and exclusion recommendations</li>
+                <li class="t" data-en="Dropping cleanup guidance" data-my="Panduan pembersihan najis burung">Dropping cleanup guidance</li>
+                <li class="t" data-en="Prevention plan for ledges, roofs, and signage" data-my="Pelan pencegahan untuk birai, bumbung dan papan tanda">Prevention plan for ledges, roofs, and signage</li>
+                    </ul>
+
+                    <div style="background: rgba(10, 125, 95, 0.05); padding: 20px; border-radius: 12px; margin-top: 24px;">
+                        <p style="margin: 0; font-weight: 600;" class="t" data-en="Suitable for shoplots, commercial buildings, signage areas, roofs, and ledges." data-my="Sesuai untuk lot kedai, bangunan komersial, kawasan papan tanda, bumbung dan birai.">Suitable for shoplots, commercial buildings, signage areas, roofs, and ledges.</p>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -1414,139 +1747,138 @@
     <!-- PAST JOBS PAGE -->
     <section id="pastjobs" class="container hidden">
         <div class="text-center mb-4">
-            <h2 class="t" data-en="Our Past Jobs & Success Stories" data-my="Kerja Lepas & Kisah Kejayaan Kami">Our Past
-                Jobs & Success Stories</h2>
+            <h2 class="t" data-en="Our Clients & Testimonials" data-my="Pelanggan & Testimoni Kami">
+                Our Clients & Testimonials</h2>
             <p class="t"
-                data-en="See how we've helped thousands of clients across Sabah since 1991. Real results, real testimonials."
-                data-my="Lihat bagaimana kami telah membantu beribu-ribu pelanggan di seluruh Sabah sejak 1991. Hasil sebenar, testimoni sebenar.">
-                See how we've helped thousands of clients across Sabah since 1991. Real results, real testimonials.</p>
+                data-en="A growing list of businesses and organizations served by KK Pest Control. Real testimonials and project photos can be added as they become available."
+                data-my="Senarai pelanggan perniagaan dan organisasi yang telah menerima servis KK Pest Control. Testimoni sebenar dan gambar kerja boleh ditambah apabila tersedia.">
+                A growing list of businesses and organizations served by KK Pest Control. Real testimonials and project photos can be added as they become available.</p>
         </div>
 
-        <!-- Job Entry 1 -->
-        <div class="card fade-in">
-            <div class="job-entry">
-                <div>
-                    <img src="./images/chilloutcafe.jpg" alt="Termite Treatment Project at ChillOut Cafe Lintas"
-                        class="job-image">
+        <div class="client-grid">
+
+            <div class="client-card fade-in">
+                <div class="client-logo-wrap">
+                    <img class="client-logo" src="./images/clients/client-aicha.png" alt="Ai-CHA Ice Cream & Tea logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="client-logo-placeholder" style="display: none;">Logo placeholder<br>Ai-CHA Ice Cream & Tea</div>
                 </div>
-                <div style="height: 100%">
-                    <h3 style="color: var(--primary); margin-bottom: 8px;">ChillOut Cafe
-                    </h3>
-                    <p style="color: var(--text-muted); font-size: 14px; margin-bottom: 16px;">
-                        <strong>Location:</strong> Lintas | <strong>Date:</strong> May 2025
+                <div class="client-content">
+                    <h3>Ai-CHA Ice Cream & Tea</h3>
+                    <p class="client-meta">
+                        <strong class="t" data-en="Location: To be added" data-my="Lokasi: Akan ditambah">Location: To be added</strong><br>
+                        <span class="t" data-en="Date: To be added" data-my="Tarikh: Akan ditambah">Date: To be added</span>
                     </p>
-                    <p class="t"
-                        data-en="Successfully eliminated a severe termite infestation in a 3-story commercial building. Used advanced baiting systems and soil treatment to protect the entire structure. Client reported no termite activity after 6-month follow-up."
-                        data-my="Berjaya membasmi serangan anai-anai teruk di bangunan komersial 3 tingkat. Menggunakan sistem umpan canggih dan rawatan tanah untuk melindungi seluruh struktur. Pelanggan melaporkan tiada aktiviti anai-anai selepas susulan 6 bulan.">
-                        Successfully eliminated a severe termite infestation in a 3-story commercial building. Used
-                        advanced baiting systems and soil treatment to protect the entire structure. Client reported no
-                        termite activity after 6-month follow-up.</p>
-                    <div
-                        style="position: relative; bottom: 0; padding: 12px; background: rgba(10, 125, 95, 0.05); border-radius: 8px;">
-                        <p style="margin: 0; font-weight: 600; color: var(--primary);" class="t"
-                            data-en="✓ Treatment: Sentricon Baiting System + Soil Barrier | Duration: 2 days"
-                            data-my="✓ Rawatan: Sistem Umpan Sentricon + Penghalang Tanah | Tempoh: 2 hari">✓ Treatment:
-                            Sentricon Baiting System + Soil Barrier | Duration: 2 days</p>
+                    <div class="client-service-tag t" data-en="Service: General Pest Control / Cockroach Treatment" data-my="Servis: Kawalan Serangga Am / Rawatan Lipas">Service: General Pest Control / Cockroach Treatment</div>
+                    <p class="t" data-en="Pest control support for a food and beverage outlet. Final job details, branch location, treatment date, and photos can be added once available." data-my="Sokongan kawalan serangga untuk premis makanan dan minuman. Butiran kerja akhir, lokasi cawangan, tarikh rawatan dan gambar boleh ditambah apabila tersedia.">Pest control support for a food and beverage outlet. Final job details, branch location, treatment date, and photos can be added once available.</p>
+                    <div class="testimonial-box">
+                        <p class="t" data-en="“Placeholder testimonial — add Ai-CHA customer feedback here once confirmed.”" data-my="“Testimoni sementara — tambah maklum balas pelanggan Ai-CHA di sini selepas disahkan.”">“Placeholder testimonial — add Ai-CHA customer feedback here once confirmed.”</p>
+                        <div class="placeholder-note t" data-en="Placeholder until real testimonial is provided." data-my="Sementara sehingga testimoni sebenar diberikan.">Placeholder until real testimonial is provided.</div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Job Entry 2 -->
-        <div class="card fade-in">
-            <div class="job-entry">
-                <div>
-                    <img src="./images/howkee.jpg" alt="How Kee Restaurant Pest Control" class="job-image">
+            <div class="client-card fade-in">
+                <div class="client-logo-wrap">
+                    <img class="client-logo" src="./images/clients/client-healthlane.webp" alt="Health Lane Family Pharmacy logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="client-logo-placeholder" style="display: none;">Logo placeholder<br>Health Lane Family Pharmacy</div>
                 </div>
-                <div>
-                    <h3 style="color: var(--primary); margin-bottom: 8px;">How Kee Restaurant</h3>
-                    <p style="color: var(--text-muted); font-size: 14px; margin-bottom: 16px;">
-                        <strong>Location:</strong> Bundusan | <strong>Date:</strong> May 2025
+                <div class="client-content">
+                    <h3>Health Lane Family Pharmacy</h3>
+                    <p class="client-meta">
+                        <strong class="t" data-en="Location: To be added" data-my="Lokasi: Akan ditambah">Location: To be added</strong><br>
+                        <span class="t" data-en="Date: To be added" data-my="Tarikh: Akan ditambah">Date: To be added</span>
                     </p>
-                    <p class="t"
-                        data-en="Complete pest management program for a busy restaurant facing cockroach and fly issues. Implemented monthly maintenance schedule with gel baiting, residual spraying, and hygiene protocols. Restaurant passed health inspection with flying colors."
-                        data-my="Program pengurusan serangga lengkap untuk restoran sibuk yang menghadapi masalah lipas dan lalat. Melaksanakan jadual penyelenggaraan bulanan dengan umpan gel, penyemburan sisa dan protokol kebersihan. Restoran lulus pemeriksaan kesihatan dengan cemerlang.">
-                        Complete pest management program for a busy restaurant facing cockroach and fly issues.
-                        Implemented monthly maintenance schedule with gel baiting, residual spraying, and hygiene
-                        protocols. Restaurant passed health inspection with flying colors.</p>
-                    <div
-                        style="margin-top: 16px; padding: 12px; background: rgba(10, 125, 95, 0.05); border-radius: 8px;">
-                        <p style="margin: 0; font-weight: 600; color: var(--primary);" class="t"
-                            data-en="✓ Treatment: Gel Baiting + ULV Fogging + Monthly Monitoring | Ongoing Contract"
-                            data-my="✓ Rawatan: Umpan Gel + Fogging ULV + Pemantauan Bulanan | Kontrak Berterusan">✓
-                            Treatment: Gel Baiting + ULV Fogging + Monthly Monitoring | Ongoing Contract</p>
+                    <div class="client-service-tag t" data-en="Service: General Pest Control / Rodent Control" data-my="Servis: Kawalan Serangga Am / Kawalan Tikus">Service: General Pest Control / Rodent Control</div>
+                    <p class="t" data-en="Pest management support for a pharmacy environment, focused on maintaining a clean and comfortable customer-facing space. Add exact treatment details when ready." data-my="Sokongan pengurusan perosak untuk persekitaran farmasi, dengan fokus mengekalkan ruang pelanggan yang bersih dan selesa. Tambah butiran rawatan sebenar apabila sedia.">Pest management support for a pharmacy environment, focused on maintaining a clean and comfortable customer-facing space. Add exact treatment details when ready.</p>
+                    <div class="testimonial-box">
+                        <p class="t" data-en="“Placeholder testimonial — add Health Lane feedback here once confirmed.”" data-my="“Testimoni sementara — tambah maklum balas Health Lane di sini selepas disahkan.”">“Placeholder testimonial — add Health Lane feedback here once confirmed.”</p>
+                        <div class="placeholder-note t" data-en="Placeholder until real testimonial is provided." data-my="Sementara sehingga testimoni sebenar diberikan.">Placeholder until real testimonial is provided.</div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Job Entry 3 -->
-        <div class="card fade-in">
-            <div class="job-entry">
-                <div>
-                    <img src="./images/besthearingaidcentre.jpg" alt="Best Hearing Aid Centre" class="job-image">
+            <div class="client-card fade-in">
+                <div class="client-logo-wrap">
+                    <img class="client-logo" src="./images/clients/client-ipg.jpg" alt="Institut Pendidikan Guru Kampus Keningau logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="client-logo-placeholder" style="display: none;">Logo placeholder<br>IPG Kampus Keningau</div>
                 </div>
-                <div>
-                    <h3 style="color: var(--primary); margin-bottom: 8px;">Best Hearing Aid Centre</h3>
-                    <p style="color: var(--text-muted); font-size: 14px; margin-bottom: 16px;">
-                        <strong>Location:</strong> Tanjung Aru | <strong>Date:</strong> May 2025
+                <div class="client-content">
+                    <h3>IPG Kampus Keningau</h3>
+                    <p class="client-meta">
+                        <strong class="t" data-en="Location: Keningau" data-my="Lokasi: Keningau">Location: Keningau</strong><br>
+                        <span class="t" data-en="Date: To be added" data-my="Tarikh: Akan ditambah">Date: To be added</span>
                     </p>
-                    <p class="t"
-                        data-en="Centre experiencing persistent rat problems for over 6 months. Our team identified 12 entry points, sealed them all, and set up monitoring traps. Zero rat activity within 2 weeks. Customer extremely satisfied with humane approach."
-                        data-my="Bisnes mengalami masalah tikus berterusan selama lebih 6 bulan. Pasukan kami mengenal pasti 12 titik masuk, menutup semuanya dan memasang perangkap pemantauan. Tiada aktiviti tikus dalam masa 2 minggu. Kustomer sangat berpuas hati dengan pendekatan berperikemanusiaan.">
-                        Centre experiencing persistent rat problems for over 6 months. Our team identified 12 entry
-                        points, sealed them all, and set up monitoring traps. Zero rat activity within 2 weeks. Customer
-                        extremely satisfied with humane approach.</p>
-                    <div
-                        style="margin-top: 16px; padding: 12px; background: rgba(10, 125, 95, 0.05); border-radius: 8px;">
-                        <p style="margin: 0; font-weight: 600; color: var(--primary);" class="t"
-                            data-en="✓ Treatment: Entry Point Sealing + Snap Traps + Weekly Monitoring | Completed"
-                            data-my="✓ Rawatan: Penutupan Titik Masuk + Perangkap Snap + Pemantauan Mingguan | Selesai">
-                            ✓ Treatment: Entry Point Sealing + Snap Traps + Weekly Monitoring | Completed</p>
+                    <div class="client-service-tag t" data-en="Service: General Pest Control / Mosquito Fogging" data-my="Servis: Kawalan Serangga Am / Fogging Nyamuk">Service: General Pest Control / Mosquito Fogging</div>
+                    <p class="t" data-en="Pest control support for an institutional campus. Use this section for the confirmed treatment scope, service date, and before/after job photos." data-my="Sokongan kawalan serangga untuk kampus institusi. Gunakan bahagian ini untuk skop rawatan yang disahkan, tarikh servis dan gambar kerja sebelum/selepas.">Pest control support for an institutional campus. Use this section for the confirmed treatment scope, service date, and before/after job photos.</p>
+                    <div class="testimonial-box">
+                        <p class="t" data-en="“Placeholder testimonial — add IPG Kampus Keningau feedback here once confirmed.”" data-my="“Testimoni sementara — tambah maklum balas IPG Kampus Keningau di sini selepas disahkan.”">“Placeholder testimonial — add IPG Kampus Keningau feedback here once confirmed.”</p>
+                        <div class="placeholder-note t" data-en="Placeholder until real testimonial is provided." data-my="Sementara sehingga testimoni sebenar diberikan.">Placeholder until real testimonial is provided.</div>
                     </div>
                 </div>
             </div>
-        </div>
 
-
-
-        <!-- Client Testimonials
-        <div class="text-center mb-4" style="margin-top: 60px;">
-            <h2 class="t" data-en="What Our Clients Say" data-my="Apa Kata Pelanggan Kami">What Our Clients Say</h2>
-        </div>
-
-        <div class="card fade-in"
-            style="background: linear-gradient(135deg, rgba(255, 149, 0, 0.05), rgba(255, 149, 0, 0.02));">
-            <div style="display: flex; gap: 16px; margin-bottom: 16px;">
-                <div style="font-size: 48px;">⭐⭐⭐⭐⭐</div>
-                <div style="flex: 1;">
-                    <p style="font-style: italic; font-size: 18px; margin-bottom: 12px;" class="t"
-                        data-en="&quot;KK Pest Control saved our restaurant! After trying 3 other companies, they were the only ones who completely eliminated our cockroach problem. Professional, thorough, and reasonably priced. Highly recommended!&quot;"
-                        data-my="&quot;KK Pest Control selamatkan restoran kami! Selepas cuba 3 syarikat lain, mereka satu-satunya yang berjaya membasmi masalah lipas kami sepenuhnya. Profesional, teliti dan harga berpatutan. Sangat disyorkan!&quot;">
-                        "KK Pest Control saved our restaurant! After trying 3 other companies, they were the only ones
-                        who completely eliminated our cockroach problem. Professional, thorough, and reasonably priced.
-                        Highly recommended!"</p>
-                    <p style="font-weight: 600; color: var(--primary);">— Sarah T., Restaurant Owner, Likas</p>
+            <div class="client-card fade-in">
+                <div class="client-logo-wrap">
+                    <img class="client-logo" src="./images/clients/client-pulapol.png" alt="PULAPOL Kota Kinabalu logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="client-logo-placeholder" style="display: none;">Logo placeholder<br>PULAPOL Kota Kinabalu</div>
+                </div>
+                <div class="client-content">
+                    <h3>PULAPOL Kota Kinabalu</h3>
+                    <p class="client-meta">
+                        <strong class="t" data-en="Location: Kota Kinabalu" data-my="Lokasi: Kota Kinabalu">Location: Kota Kinabalu</strong><br>
+                        <span class="t" data-en="Date: To be added" data-my="Tarikh: Akan ditambah">Date: To be added</span>
+                    </p>
+                    <div class="client-service-tag t" data-en="Service: General Pest Control / Mosquito Fogging" data-my="Servis: Kawalan Serangga Am / Fogging Nyamuk">Service: General Pest Control / Mosquito Fogging</div>
+                    <p class="t" data-en="Pest control support for a training facility. Add confirmed treatment areas, service date, and job photos when available." data-my="Sokongan kawalan serangga untuk fasiliti latihan. Tambah kawasan rawatan yang disahkan, tarikh servis dan gambar kerja apabila tersedia.">Pest control support for a training facility. Add confirmed treatment areas, service date, and job photos when available.</p>
+                    <div class="testimonial-box">
+                        <p class="t" data-en="“Placeholder testimonial — add PULAPOL Kota Kinabalu feedback here once confirmed.”" data-my="“Testimoni sementara — tambah maklum balas PULAPOL Kota Kinabalu di sini selepas disahkan.”">“Placeholder testimonial — add PULAPOL Kota Kinabalu feedback here once confirmed.”</p>
+                        <div class="placeholder-note t" data-en="Placeholder until real testimonial is provided." data-my="Sementara sehingga testimoni sebenar diberikan.">Placeholder until real testimonial is provided.</div>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="card fade-in"
-            style="background: linear-gradient(135deg, rgba(255, 149, 0, 0.05), rgba(255, 149, 0, 0.02));">
-            <div style="display: flex; gap: 16px; margin-bottom: 16px;">
-                <div style="font-size: 48px;">⭐⭐⭐⭐⭐</div>
-                <div style="flex: 1;">
-                    <p style="font-style: italic; font-size: 18px; margin-bottom: 12px;" class="t"
-                        data-en="&quot;Termites were eating our house! The team came out same day, did a thorough inspection, and explained everything clearly. The baiting system worked perfectly. No more termites and we have peace of mind with the 5-year warranty.&quot;"
-                        data-my="&quot;Anai-anai memakan rumah kami! Pasukan datang hari yang sama, buat pemeriksaan menyeluruh dan terangkan semua dengan jelas. Sistem umpan berfungsi dengan sempurna. Tiada lagi anai-anai dan kami rasa tenang dengan waranti 5 tahun.&quot;">
-                        "Termites were eating our house! The team came out same day, did a thorough inspection, and
-                        explained everything clearly. The baiting system worked perfectly. No more termites and we have
-                        peace of mind with the 5-year warranty."</p>
-                    <p style="font-weight: 600; color: var(--primary);">— Ahmad B., Homeowner, Penampang</p>
+            <div class="client-card fade-in">
+                <div class="client-logo-wrap">
+                    <img class="client-logo" src="./images/clients/client-waikiki.webp" alt="Waikiki Shore Beach Condominiums logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="client-logo-placeholder" style="display: none;">Logo placeholder<br>Waikiki Shore Beach Condominiums</div>
+                </div>
+                <div class="client-content">
+                    <h3>Waikiki Shore Beach Condominiums</h3>
+                    <p class="client-meta">
+                        <strong class="t" data-en="Location: To be added" data-my="Lokasi: Akan ditambah">Location: To be added</strong><br>
+                        <span class="t" data-en="Date: To be added" data-my="Tarikh: Akan ditambah">Date: To be added</span>
+                    </p>
+                    <div class="client-service-tag t" data-en="Service: General Pest Control / Rodent Control" data-my="Servis: Kawalan Serangga Am / Kawalan Tikus">Service: General Pest Control / Rodent Control</div>
+                    <p class="t" data-en="Pest control support for a condominium property. Add the exact scope, treated areas, job date, and photos once available." data-my="Sokongan kawalan serangga untuk hartanah kondominium. Tambah skop sebenar, kawasan rawatan, tarikh kerja dan gambar apabila tersedia.">Pest control support for a condominium property. Add the exact scope, treated areas, job date, and photos once available.</p>
+                    <div class="testimonial-box">
+                        <p class="t" data-en="“Placeholder testimonial — add Waikiki Shore feedback here once confirmed.”" data-my="“Testimoni sementara — tambah maklum balas Waikiki Shore di sini selepas disahkan.”">“Placeholder testimonial — add Waikiki Shore feedback here once confirmed.”</p>
+                        <div class="placeholder-note t" data-en="Placeholder until real testimonial is provided." data-my="Sementara sehingga testimoni sebenar diberikan.">Placeholder until real testimonial is provided.</div>
+                    </div>
                 </div>
             </div>
+
+            <div class="client-card fade-in">
+                <div class="client-logo-wrap">
+                    <img class="client-logo" src="./images/clients/client-walnut.jpg" alt="Walnut logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="client-logo-placeholder" style="display: none;">Logo placeholder<br>Walnut</div>
+                </div>
+                <div class="client-content">
+                    <h3>Walnut</h3>
+                    <p class="client-meta">
+                        <strong class="t" data-en="Location: To be added" data-my="Lokasi: Akan ditambah">Location: To be added</strong><br>
+                        <span class="t" data-en="Date: To be added" data-my="Tarikh: Akan ditambah">Date: To be added</span>
+                    </p>
+                    <div class="client-service-tag t" data-en="Service: General Pest Control / Cockroach Treatment" data-my="Servis: Kawalan Serangga Am / Rawatan Lipas">Service: General Pest Control / Cockroach Treatment</div>
+                    <p class="t" data-en="Pest control support for a food and beverage business. Add treatment notes, final service date, branch location, and customer testimonial when ready." data-my="Sokongan kawalan serangga untuk perniagaan makanan dan minuman. Tambah nota rawatan, tarikh servis akhir, lokasi cawangan dan testimoni pelanggan apabila sedia.">Pest control support for a food and beverage business. Add treatment notes, final service date, branch location, and customer testimonial when ready.</p>
+                    <div class="testimonial-box">
+                        <p class="t" data-en="“Placeholder testimonial — add Walnut customer feedback here once confirmed.”" data-my="“Testimoni sementara — tambah maklum balas pelanggan Walnut di sini selepas disahkan.”">“Placeholder testimonial — add Walnut customer feedback here once confirmed.”</p>
+                        <div class="placeholder-note t" data-en="Placeholder until real testimonial is provided." data-my="Sementara sehingga testimoni sebenar diberikan.">Placeholder until real testimonial is provided.</div>
+                    </div>
+                </div>
+            </div>
+
         </div>
- -->
+
         <div style="text-align: center; margin-top: 40px;">
             <a class="btn btn-primary" onclick="showPage('questionnaire')">
                 <span class="t" data-en="📝 Get Your Free Quote" data-my="📝 Dapatkan Sebut Harga Percuma">📝 Get Your
@@ -1571,13 +1903,14 @@
                         data-my="Apakah masalah serangga yang anda alami?">What pest problem are you
                         experiencing?</label>
                     <select id="pestType">
-                        <option class="t" data-en="Termites" data-my="Anai-anai">Termites</option>
-                        <option class="t" data-en="Cockroaches" data-my="Lipas">Cockroaches</option>
-                        <option class="t" data-en="Rats/Mice" data-my="Tikus">Rats/Mice</option>
-                        <option class="t" data-en="Mosquitoes" data-my="Nyamuk">Mosquitoes</option>
-                        <option class="t" data-en="Bed Bugs" data-my="Pepijat">Bed Bugs</option>
-                        <option class="t" data-en="Ants" data-my="Semut">Ants</option>
-                        <option class="t" data-en="Other Pests" data-my="Serangga Lain">Other</option>
+                        <option class="t" data-en="Termite Control" data-my="Kawalan Anai-anai">Termite Control</option>
+                        <option class="t" data-en="Cockroach Treatment" data-my="Rawatan Lipas">Cockroach Treatment</option>
+                        <option class="t" data-en="Rodent Control" data-my="Kawalan Tikus">Rodent Control</option>
+                        <option class="t" data-en="Mosquito Fogging" data-my="Fogging Nyamuk">Mosquito Fogging</option>
+                        <option class="t" data-en="Bed Bug Treatment" data-my="Rawatan Pepijat">Bed Bug Treatment</option>
+                        <option class="t" data-en="General Pest Control" data-my="Kawalan Serangga Am">General Pest Control</option>
+                        <option class="t" data-en="Gecko Control" data-my="Kawalan Cicak">Gecko Control</option>
+                        <option class="t" data-en="Bird Control" data-my="Kawalan Burung">Bird Control</option>
                     </select>
                 </div>
 
@@ -1820,6 +2153,27 @@
             }
         }
 
+        // Service footer Malay translation safety fix
+        function fixServiceFooterMalayTranslations() {
+            const footerTranslations = {
+                "Ideal for homes, shops, offices, and commercial buildings.": "Sesuai untuk rumah, kedai, pejabat dan bangunan komersial.",
+                "Suitable for homes, restaurants, cafes, offices, and food preparation areas.": "Sesuai untuk rumah, restoran, kafe, pejabat dan kawasan penyediaan makanan.",
+                "Recommended for homes, shops, food businesses, storerooms, and warehouses.": "Disyorkan untuk rumah, kedai, perniagaan makanan, stor dan gudang.",
+                "Useful for dengue prevention, outdoor events, residential areas, and workplaces.": "Berguna untuk pencegahan denggi, acara luar, kawasan kediaman dan tempat kerja.",
+                "Best for homes, hotels, staff quarters, hostels, and rental rooms.": "Sesuai untuk rumah, hotel, kuarters pekerja, hostel dan bilik sewa.",
+                "A practical option when you are unsure what pest problem you have.": "Pilihan praktikal jika anda tidak pasti masalah perosak yang dihadapi.",
+                "Helpful for restaurants, shoplots, homes, offices, and ceiling areas.": "Membantu untuk restoran, lot kedai, rumah, pejabat dan kawasan siling.",
+                "Suitable for shoplots, commercial buildings, signage areas, roofs, and ledges.": "Sesuai untuk lot kedai, bangunan komersial, kawasan papan tanda, bumbung dan birai."
+            };
+
+            document.querySelectorAll('.service-detail-card p.t[data-en]').forEach(element => {
+                const englishText = element.getAttribute('data-en');
+                if (footerTranslations[englishText]) {
+                    element.setAttribute('data-my', footerTranslations[englishText]);
+                }
+            });
+        }
+
         // Language Toggle
         function toggleLang() {
             currentLang = currentLang === "en" ? "my" : "en";
@@ -1887,6 +2241,69 @@ Please provide a quote for this service. Thank you!
             window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`, '_blank');
         }
 
+
+
+        // Service image fullscreen lightbox
+        function openImageLightbox(img) {
+            const lightbox = document.getElementById('imageLightbox');
+            const lightboxImg = document.getElementById('imageLightboxImg');
+
+            if (!lightbox || !lightboxImg || !img || !img.src) return;
+
+            lightboxImg.src = img.src;
+            lightboxImg.alt = img.alt || 'Service image preview';
+            lightbox.classList.add('active');
+            lightbox.setAttribute('aria-hidden', 'false');
+            document.body.classList.add('lightbox-open');
+        }
+
+        function closeImageLightbox() {
+            const lightbox = document.getElementById('imageLightbox');
+            const lightboxImg = document.getElementById('imageLightboxImg');
+
+            if (!lightbox || !lightboxImg) return;
+
+            lightbox.classList.remove('active');
+            lightbox.setAttribute('aria-hidden', 'true');
+            document.body.classList.remove('lightbox-open');
+
+            setTimeout(() => {
+                if (!lightbox.classList.contains('active')) {
+                    lightboxImg.src = '';
+                    lightboxImg.alt = '';
+                }
+            }, 200);
+        }
+
+        function handleLightboxBackdropClick(event) {
+            if (event.target.id === 'imageLightbox' || event.target.classList.contains('image-lightbox-content')) {
+                closeImageLightbox();
+            }
+        }
+
+        function initializeServiceImageLightbox() {
+            document.querySelectorAll('#services .service-detail-image').forEach(img => {
+                img.setAttribute('tabindex', '0');
+                img.setAttribute('role', 'button');
+                img.setAttribute('aria-label', 'Open full screen service image');
+
+                img.addEventListener('click', () => openImageLightbox(img));
+
+                img.addEventListener('keydown', event => {
+                    if (event.key === 'Enter' || event.key === ' ') {
+                        event.preventDefault();
+                        openImageLightbox(img);
+                    }
+                });
+            });
+
+            document.addEventListener('keydown', event => {
+                if (event.key === 'Escape') {
+                    closeImageLightbox();
+                }
+            });
+        }
+
         // Initialize on page load
         document.addEventListener('DOMContentLoaded', function () {
             // Handle initial hash or show home
@@ -1896,7 +2313,10 @@ Please provide a quote for this service. Thank you!
             window.addEventListener('hashchange', handleHashChange);
 
             // Initialize language
+            fixServiceFooterMalayTranslations();
             toggleLang();
+
+            initializeServiceImageLightbox();
 
             // Add smooth scroll behavior
             document.querySelectorAll('a[onclick^="showPage"]').forEach(link => {
