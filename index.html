@@ -10,6 +10,7 @@
         gtag('js', new Date());
         gtag('config', 'AW-18171589737');
         gtag('config', 'G-P07L6XGL5R');
+        gtag('config', 'G-FW1VK1QK3N');
     </script>
 
     <meta charset="UTF-8" />
@@ -1447,8 +1448,7 @@
                 </div>
                 <div class="stat-item">
                     <span class="stat-number">90</span>
-                    <span class="stat-label t" data-en="Day Warranty" data-my="Hari Jaminan">Support
-                        Available</span>
+                    <span class="stat-label t" data-en="Day Warranty" data-my="Hari Jaminan">Day Warranty</span>
                 </div>
                 <div class="stat-item">
                     <span class="stat-number">100%</span>
@@ -1628,6 +1628,10 @@
                         <img class="service-detail-image" src="./images/services/service-termite.png"
                             alt="Termite baiting system service image"
                             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="service-detail-image-placeholder">
+                            <span>🐜</span>
+                            <small>Replace image: ./images/services/service-termite.png</small>
+                        </div>
                     </div>
                 </div>
                 <div>
@@ -1862,6 +1866,10 @@
                         <img class="service-detail-image" src="./images/services/service-rodent.png"
                             alt="Rodent treatment service image"
                             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="service-detail-image-placeholder">
+                            <span>🐭</span>
+                            <small>Replace image: ./images/services/service-rodent.png</small>
+                        </div>
                     </div>
                 </div>
                 <div>
@@ -1913,6 +1921,10 @@
                         <img class="service-detail-image" src="./images/services/service-mosquito.png"
                             alt="Mosquito fogging service image"
                             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="service-detail-image-placeholder">
+                            <span>🦟</span>
+                            <small>Replace image: ./images/services/service-mosquito.png</small>
+                        </div>
                     </div>
                 </div>
                 <div>
@@ -1965,6 +1977,10 @@
                         <img class="service-detail-image" src="./images/services/service-bed-bugs.png"
                             alt="Bed bug treatment service image"
                             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="service-detail-image-placeholder">
+                            <span>🛏️</span>
+                            <small>Replace image: ./images/services/service-bed-bugs.png</small>
+                        </div>
                     </div>
                 </div>
                 <div>
@@ -2016,6 +2032,10 @@
                         <img class="service-detail-image" src="./images/services/service-general.png"
                             alt="General pest control service image"
                             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="service-detail-image-placeholder">
+                            <span>🛡️</span>
+                            <small>Replace image: ./images/services/service-general.png</small>
+                        </div>
                     </div>
                 </div>
                 <div>
@@ -2069,7 +2089,7 @@
                             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                         <div class="service-detail-image-placeholder">
                             <span>🐦</span>
-                            <small>Replace image: ./images/services/bird-control.jpg</small>
+                            <small>Replace image: ./images/services/service-bird.png</small>
                         </div>
                     </div>
                 </div>
@@ -2604,6 +2624,11 @@
     <script>
         // Configuration
         const WHATSAPP_NUMBER = "60163587488";
+
+        // GA4 properties that should receive events.
+        // 1st = KK Pest Control's own property, 2nd = client's property.
+        const GA_IDS = ['G-P07L6XGL5R', 'G-FW1VK1QK3N'];
+
         let currentLang = "en";
 
         // GA4 virtual pageviews for this single-page site.
@@ -2626,7 +2651,7 @@
 
             if (typeof gtag === 'function') {
                 gtag('event', 'page_view', {
-                    'send_to': 'G-P07L6XGL5R',
+                    'send_to': GA_IDS,
                     'page_title': document.title + ' | ' + pageId,
                     'page_location': window.location.origin + window.location.pathname + '#' + pageId,
                     'page_path': path
@@ -2758,27 +2783,6 @@
             if (targetState.serviceId) {
                 scrollToServiceTarget(targetState.serviceId, false);
             }
-        }
-
-        // Service footer Malay translation safety fix
-        function fixServiceFooterMalayTranslations() {
-            const footerTranslations = {
-                "Ideal for homes, shops, offices, and commercial buildings.": "Sesuai untuk rumah, kedai, pejabat dan bangunan komersial.",
-                "Suitable for homes, restaurants, cafes, offices, and food preparation areas.": "Sesuai untuk rumah, restoran, kafe, pejabat dan kawasan penyediaan makanan.",
-                "Recommended for homes, shops, food businesses, storerooms, and warehouses.": "Disyorkan untuk rumah, kedai, perniagaan makanan, stor dan gudang.",
-                "Useful for dengue prevention, outdoor events, residential areas, and workplaces.": "Berguna untuk pencegahan denggi, acara luar, kawasan kediaman dan tempat kerja.",
-                "Best for homes, hotels, staff quarters, hostels, and rental rooms.": "Sesuai untuk rumah, hotel, kuarters pekerja, hostel dan bilik sewa.",
-                "A practical option when you are unsure what pest problem you have.": "Pilihan praktikal jika anda tidak pasti masalah perosak yang dihadapi.",
-                "Helpful for restaurants, shoplots, homes, offices, and ceiling areas.": "Membantu untuk restoran, lot kedai, rumah, pejabat dan kawasan siling.",
-                "Suitable for shoplots, commercial buildings, signage areas, roofs, and ledges.": "Sesuai untuk lot kedai, bangunan komersial, kawasan papan tanda, bumbung dan birai."
-            };
-
-            document.querySelectorAll('.service-detail-card p.t[data-en]').forEach(element => {
-                const englishText = element.getAttribute('data-en');
-                if (footerTranslations[englishText]) {
-                    element.setAttribute('data-my', footerTranslations[englishText]);
-                }
-            });
         }
 
         // Language Toggle
@@ -2918,13 +2922,7 @@ Please provide a quote for this service. Thank you!
             history.replaceState(initialState, '', window.location.hash || '#home');
             applyNavigationState(initialState);
 
-            // Restore the previous page and scroll position when the browser Back/Forward buttons are used
-            window.addEventListener('popstate', event => {
-                applyNavigationState(event.state);
-            });
-
             // Initialize language
-            fixServiceFooterMalayTranslations();
             toggleLang();
 
             initializeServiceImageLightbox();
@@ -2966,7 +2964,7 @@ Please provide a quote for this service. Thank you!
                     'currency': 'MYR'
                 });
                 gtag('event', 'whatsapp_click', {
-                    'send_to': 'G-P07L6XGL5R',
+                    'send_to': GA_IDS,
                     'value': value,
                     'currency': 'MYR'
                 });
