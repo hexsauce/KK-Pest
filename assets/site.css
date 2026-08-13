@@ -97,13 +97,13 @@ header {
     z-index: 101;
 }
 
-nav {
+header nav {
     display: flex;
     gap: 8px;
     align-items: center;
 }
 
-nav a {
+header nav a {
     color: rgba(255, 255, 255, 0.9);
     text-decoration: none;
     font-weight: 600;
@@ -115,7 +115,7 @@ nav a {
     white-space: nowrap;
 }
 
-nav a:hover {
+header nav a:hover {
     background: rgba(255, 255, 255, 0.15);
     color: white;
 }
@@ -1009,7 +1009,7 @@ footer {
         font-size: 16px;
     }
 
-    nav {
+    header nav {
         position: fixed;
         top: 0;
         right: -100%;
@@ -1025,11 +1025,11 @@ footer {
         align-items: stretch;
     }
 
-    nav.active {
+    header nav.active {
         right: 0;
     }
 
-    nav a {
+    header nav a {
         width: 100%;
         text-align: left;
         padding: 14px 20px;
@@ -1267,18 +1267,18 @@ body {
 }
 
 /* Prevent nav overflow */
-nav {
+header nav {
     overflow-x: hidden;
 }
 
-nav ul {
+header nav ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     padding: 0;
 }
 
-nav ul li {
+header nav ul li {
     white-space: nowrap;
 }
 
@@ -1587,11 +1587,32 @@ img {
 }
 
 .toc ol {
-    margin: 0 0 0 20px;
+    /* Custom counters instead of default markers: the number then sits flush
+       with the "In this guide" heading rather than in its own hanging indent,
+       and wrapped lines stay aligned with the text column, not the number. */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    counter-reset: toc;
 }
 
 .toc li {
-    margin-bottom: 7px;
+    counter-increment: toc;
+    display: grid;
+    grid-template-columns: 1.75em 1fr;
+    align-items: baseline;
+    margin-bottom: 9px;
+}
+
+.toc li:last-child {
+    margin-bottom: 0;
+}
+
+.toc li::before {
+    content: counter(toc) ".";
+    color: var(--primary);
+    font-weight: 800;
+    font-variant-numeric: tabular-nums;
 }
 
 .toc a {
@@ -1834,4 +1855,18 @@ img {
 .prose figure img:focus {
     outline: 4px solid rgba(10, 125, 95, 0.35);
     outline-offset: 4px;
+}
+
+
+/* The header navigation is styled via `header nav`, not a bare `nav` selector.
+   <nav class="toc"> and <nav class="breadcrumb"> are also <nav> elements, and
+   a bare selector turned them into flex rows on desktop and slid them off
+   screen entirely on mobile. These resets keep them safe if that ever returns. */
+.toc,
+.breadcrumb {
+    display: block;
+    position: static;
+    height: auto;
+    width: auto;
+    flex-direction: initial;
 }
