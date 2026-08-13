@@ -193,6 +193,12 @@ document.addEventListener('DOMContentLoaded', function () {
     history.replaceState(initialState, '', window.location.hash || '#home');
     applyNavigationState(initialState);
 
+    // Restore the previous page and scroll position when the browser
+    // Back/Forward buttons are used.
+    window.addEventListener('popstate', function (event) {
+        applyNavigationState(event.state);
+    });
+
     // Add smooth scroll behavior
     document.querySelectorAll('a[onclick^="showPage"]').forEach(link => {
         link.style.cursor = 'pointer';
