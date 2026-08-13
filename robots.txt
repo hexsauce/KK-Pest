@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Scaffolding, not a real article — keep it out of the index.
+Disallow: /blog/_TEMPLATE/
+
+Sitemap: https://kkpestctrl.com/sitemap.xml

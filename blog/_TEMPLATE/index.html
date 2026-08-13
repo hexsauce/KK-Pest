@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<!--
+  ═══════════════════════════════════════════════════════════════════════════
+  ARTICLE TEMPLATE
+
+  To create a new article:
+    1. Copy this whole folder to /blog/<your-url-slug>/
+    2. Find every {{PLACEHOLDER}} below and replace it
+    3. Add a card to /blog/index.html
+    4. Add the URL to /sitemap.xml
+
+  The folder name IS the URL. /blog/7-signs-of-termites/ → keep slugs short,
+  lowercase, hyphenated, and never change one after publishing.
+
+  Every {{PLACEHOLDER}} appears in BOTH the visible HTML and the JSON-LD.
+  Miss one in the schema and the structured data silently disagrees with the
+  page, which is worse than having no schema at all.
+  ═══════════════════════════════════════════════════════════════════════════
+-->
+<html lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18171589737"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'AW-18171589737');
+        gtag('config', 'G-P07L6XGL5R');
+        gtag('config', 'G-FW1VK1QK3N');
+    </script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- TITLE: under ~60 characters or Google truncates it.
+         Put the search phrase first, brand last. -->
+    <title>{{TITLE}} | KK Pest Control Sabah</title>
+
+    <!-- DESCRIPTION: 140–160 characters. This is ad copy, not a summary —
+         it decides whether someone clicks your result over the one above it. -->
+    <meta name="description" content="{{META_DESCRIPTION}}">
+
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://kkpestctrl.com/blog/{{SLUG}}/">
+    <link rel="icon" href="../../images/logo.png" type="image/x-icon">
+    <meta name="theme-color" content="#0a7d5f">
+
+    <!-- When a Malay translation exists, uncomment BOTH lines and add the
+         mirrored pair to the Malay page. hreflang must be reciprocal or
+         Google ignores it entirely. -->
+    <!-- <link rel="alternate" hreflang="en" href="https://kkpestctrl.com/blog/{{SLUG}}/"> -->
+    <!-- <link rel="alternate" hreflang="ms" href="https://kkpestctrl.com/blog/ms/{{SLUG}}/"> -->
+
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://kkpestctrl.com/blog/{{SLUG}}/">
+    <meta property="og:title" content="{{TITLE}}">
+    <meta property="og:description" content="{{META_DESCRIPTION}}">
+    <meta property="og:image" content="https://kkpestctrl.com/images/blog/{{SLUG}}.jpg">
+    <meta property="og:locale" content="en_MY">
+    <meta property="article:published_time" content="{{ISO_DATE}}">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="{{TITLE}}">
+    <meta property="twitter:description" content="{{META_DESCRIPTION}}">
+    <meta property="twitter:image" content="https://kkpestctrl.com/images/blog/{{SLUG}}.jpg">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/site.css">
+
+    <!-- ── Article schema ──────────────────────────────────────────────── -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "{{TITLE}}",
+      "description": "{{META_DESCRIPTION}}",
+      "image": "https://kkpestctrl.com/images/blog/{{SLUG}}.jpg",
+      "datePublished": "{{ISO_DATE}}",
+      "dateModified": "{{ISO_DATE}}",
+      "inLanguage": "en",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://kkpestctrl.com/blog/{{SLUG}}/"
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "KK Pest Control",
+        "url": "https://kkpestctrl.com"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "KK Pest Control",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://kkpestctrl.com/images/logo.png"
+        }
+      },
+      "about": { "@type": "Thing", "name": "{{TOPIC}}" },
+      "spatialCoverage": { "@type": "Place", "name": "Sabah, Malaysia" }
+    }
+    </script>
+
+    <!-- ── Breadcrumb schema ───────────────────────────────────────────── -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://kkpestctrl.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Knowledge Centre", "item": "https://kkpestctrl.com/blog/" },
+        { "@type": "ListItem", "position": 3, "name": "{{TITLE}}" }
+      ]
+    }
+    </script>
+
+    <!-- ── FAQ schema ──────────────────────────────────────────────────────
+         This is the single highest-value block for AI visibility: it hands
+         assistants clean question/answer pairs they can quote directly.
+
+         RULE: every question and answer here must also appear as visible text
+         in the article body. Schema that isn't on the page is a guidelines
+         violation and can get structured data ignored sitewide.
+         Delete this block if the article has no Q&A section.
+         ────────────────────────────────────────────────────────────────── -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "{{FAQ_Q1}}",
+          "acceptedAnswer": { "@type": "Answer", "text": "{{FAQ_A1}}" }
+        },
+        {
+          "@type": "Question",
+          "name": "{{FAQ_Q2}}",
+          "acceptedAnswer": { "@type": "Answer", "text": "{{FAQ_A2}}" }
+        }
+      ]
+    }
+    </script>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-content">
+            <div class="logo-section">
+                <a href="../../index.html"><img src="../../images/logo.png" alt="KK Pest Control Logo" class="logo"></a>
+                <span class="brand-text">KK Pest Control</span>
+            </div>
+
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle menu">
+                <span id="menuIcon">☰</span>
+            </button>
+
+            <nav id="mainNav">
+                <a href="../../index.html" class="t" data-en="Home" data-my="Laman Utama">Home</a>
+                <a href="../../index.html#services" class="t" data-en="Services" data-my="Perkhidmatan">Services</a>
+                <a href="../../index.html#questionnaire" class="t" data-en="Free Inspection"
+                    data-my="Permeriksaan Percuma">Free Inspection</a>
+                <a href="../../index.html#pastjobs" class="t" data-en="Past Jobs" data-my="Kerja Lepas">Past Jobs</a>
+                <a href="../../index.html#about" class="t" data-en="About" data-my="Tentang Kami">About</a>
+                <a href="../" class="t" data-en="Blog" data-my="Blog">Blog</a>
+                <button id="langBtn" class="lang-toggle" onclick="toggleLang()">EN</button>
+            </nav>
+        </div>
+    </header>
+
+    <div class="article-wrap">
+
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="../../index.html">Home</a><span>›</span><a href="../">Knowledge Centre</a><span>›</span>{{SHORT_TITLE}}
+        </nav>
+
+        <!-- Exactly ONE <h1> per page. It should closely match the <title>. -->
+        <article class="article-header">
+            <span class="post-tag">{{CATEGORY}}</span>
+            <h1>{{TITLE}}</h1>
+
+            <!-- Standfirst: answer the reader's question in the first two
+                 sentences. Do not warm up. Both people and AI assistants
+                 weight opening text heavily. -->
+            <p class="article-standfirst">{{STANDFIRST}}</p>
+
+            <div class="article-byline">
+                <span>By <strong>KK Pest Control</strong></span>
+                <span>·</span>
+                <span>Licensed operators in Sabah since 1991</span>
+                <span>·</span>
+                <span>{{DISPLAY_DATE}}</span>
+                <span>·</span>
+                <span>{{READ_TIME}} min read</span>
+            </div>
+
+            <img class="article-hero" src="../../images/blog/{{SLUG}}.jpg" alt="{{HERO_ALT}}"
+                onerror="this.style.display='none';">
+        </article>
+
+        <div class="prose">
+
+            <!-- Table of contents. Each href must match a heading id below. -->
+            <nav class="toc">
+                <h2>In this guide</h2>
+                <ol>
+                    <li><a href="#section-1">{{SECTION_1_TITLE}}</a></li>
+                    <li><a href="#section-2">{{SECTION_2_TITLE}}</a></li>
+                    <li><a href="#section-3">{{SECTION_3_TITLE}}</a></li>
+                    <li><a href="#faq">Common questions</a></li>
+                </ol>
+            </nav>
+
+            <!-- ══════════════════════════════════════════════════════════════
+                 BODY
+
+                 The 80/20 line, in practice. Write freely about:
+                   identification · why it happens here · warning signs ·
+                   risks and costs · prevention · what to expect from treatment
+
+                 Leave out entirely:
+                   chemical names and concentrations · dosages ·
+                   injection points and drilling patterns · bait placement
+                   technique · step-by-step DIY treatment
+
+                 The reader should finish thinking "this is more involved than
+                 I realised", not "I can handle this myself".
+                 ══════════════════════════════════════════════════════════════ -->
+
+            <h2 id="section-1">{{SECTION_1_TITLE}}</h2>
+            <p>{{BODY}}</p>
+
+            <div class="callout">
+                <div class="callout-title">Local context</div>
+                <p>Use callouts for Sabah-specific detail — humidity, monsoon timing, common
+                    construction types, local species. This is the material no global pest site has,
+                    and it's what makes the page worth citing for local searches.</p>
+            </div>
+
+            <h2 id="section-2">{{SECTION_2_TITLE}}</h2>
+            <p>{{BODY}}</p>
+
+            <div class="callout warning">
+                <div class="callout-title">Common mistake</div>
+                <p>Use the warning variant for what NOT to do. These sections earn trust and
+                    naturally explain why the problem needs judgement — without reading as a sales pitch.</p>
+            </div>
+
+            <h2 id="section-3">{{SECTION_3_TITLE}}</h2>
+            <p>{{BODY}}</p>
+
+            <!-- ── FAQ ──────────────────────────────────────────────────────
+                 Must mirror the FAQPage schema in <head>, word for word.
+                 Phrase questions the way people actually type or speak them.
+                 Answer in the first sentence, then add nuance.
+                 ─────────────────────────────────────────────────────────── -->
+            <h2 id="faq">Common questions</h2>
+
+            <h3>{{FAQ_Q1}}</h3>
+            <p>{{FAQ_A1}}</p>
+
+            <h3>{{FAQ_Q2}}</h3>
+            <p>{{FAQ_A2}}</p>
+
+            <!-- The ONLY conversion moment in the body. One section, near the
+                 end, framed as guidance rather than a pitch. No package names,
+                 no pricing, no service catalogue. -->
+            <h2 id="when-to-call">When this needs a professional</h2>
+            <p>{{WHEN_TO_CALL}}</p>
+
+        </div>
+
+        <div class="author-box">
+            <img src="../../images/logo.png" alt="KK Pest Control">
+            <div>
+                <h3>KK Pest Control</h3>
+                <p>Licensed pest management operators based in Kota Kinabalu, serving homes and
+                    businesses across Sabah since 1991. Our technicians hold current operator
+                    licences and treat properties from kampung houses to commercial kitchens.</p>
+            </div>
+        </div>
+
+        <div class="article-cta">
+            <h2 class="t" data-en="Think you have a problem?" data-my="Rasa anda ada masalah?">Think you have a
+                problem?</h2>
+            <p class="t"
+                data-en="A free inspection tells you what you're actually dealing with — species, extent, and whether it needs treating now or watching."
+                data-my="Pemeriksaan percuma memberitahu anda apa sebenarnya yang dihadapi — spesies, tahap serangan, dan sama ada ia perlu dirawat sekarang atau dipantau.">
+                A free inspection tells you what you're actually dealing with — species, extent, and whether it needs
+                treating now or watching.</p>
+            <div class="cta-group">
+                <a class="btn btn-primary" href="../../index.html#questionnaire">
+                    <span class="t" data-en="🔍 Get Free Inspection"
+                        data-my="🔍 Pemeriksaan Percuma">🔍 Get Free Inspection</span>
+                </a>
+                <a class="btn btn-secondary" href="https://wa.me/60163587488" target="_blank" rel="noopener"
+                    onclick="gtag_report_conversion();">
+                    <span class="t" data-en="💬 WhatsApp Us" data-my="💬 WhatsApp Kami">💬 WhatsApp Us</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Internal links matter more than most people expect: they're how
+             Google works out which pages form a topic cluster, and how AI
+             assistants discover the rest of your content. Link 2–4 related
+             articles from every page. -->
+        <section class="related">
+            <h2>Related guides</h2>
+            <div class="related-list">
+                <a href="../{{RELATED_SLUG_1}}/">{{RELATED_TITLE_1}}</a>
+                <a href="../{{RELATED_SLUG_2}}/">{{RELATED_TITLE_2}}</a>
+                <a href="../{{RELATED_SLUG_3}}/">{{RELATED_TITLE_3}}</a>
+            </div>
+        </section>
+
+    </div>
+
+    <div class="whatsapp-float" onclick="openWhatsApp('https://wa.me/60163587488')">💬</div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="copyright">
+                <p class="t"
+                    data-en="© 2026 KK Pest Control – Professional Pest Management Services in Kota Kinabalu, Sabah"
+                    data-my="© 2026 KK Pest Control – Perkhidmatan Pengurusan Serangga Profesional di Kota Kinabalu, Sabah">
+                    © 2026 KK Pest Control – Professional Pest Management Services in Kota Kinabalu, Sabah</p>
+                <p style="margin-top: 8px; font-size: 13px;">
+                    <span class="t" data-en="Licensed &amp; Insured | Available 24/7 | Serving All Sabah"
+                        data-my="Berlesen &amp; Diinsuranskan | Tersedia 24/7 | Meliputi Seluruh Sabah">Licensed &amp;
+                        Insured | Available 24/7 | Serving All Sabah</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../assets/site.js"></script>
+</body>
+
+</html>

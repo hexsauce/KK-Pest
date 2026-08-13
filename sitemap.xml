@@ -1,44 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Google ignores <changefreq> and <priority>. Only <loc> and <lastmod> matter.
+
+  Keep <lastmod> HONEST — set it to the date the page content actually changed.
+  Stamping today's date on everything teaches Google to distrust your dates.
+
+  Do NOT add "#section" URLs. Fragments are stripped by crawlers, so they all
+  collapse into the homepage entry.
+
+  Add one <url> block per published article.
+-->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  
-  <!-- Home Page -->
+
   <url>
     <loc>https://kkpestctrl.com/</loc>
-    <lastmod>2025-12-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    <lastmod>2026-08-12</lastmod>
   </url>
-  
-  <!-- Services Page -->
+
   <url>
-    <loc>https://kkpestctrl.com/#services</loc>
-    <lastmod>2025-12-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://kkpestctrl.com/blog/</loc>
+    <lastmod>2026-08-12</lastmod>
   </url>
-  
-  <!-- Get Quote / Questionnaire Page -->
+
   <url>
-    <loc>https://kkpestctrl.com/#questionnaire</loc>
-    <lastmod>2025-12-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://kkpestctrl.com/blog/found-termites-what-to-do/</loc>
+    <lastmod>2026-08-12</lastmod>
   </url>
-  
-  <!-- Past Jobs Page -->
-  <url>
-    <loc>https://kkpestctrl.com/#pastjobs</loc>
-    <lastmod>2025-12-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <!-- About Page -->
-  <url>
-    <loc>https://kkpestctrl.com/#about</loc>
-    <lastmod>2025-12-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
+
+  <!-- <url>
+    <loc>https://kkpestctrl.com/blog/your-slug/</loc>
+    <lastmod>2026-08-12</lastmod>
+  </url> -->
 
 </urlset>
